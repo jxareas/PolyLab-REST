@@ -1,13 +1,13 @@
-package com.polylab.discovery;
+package com.polylab.configuration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PlDiscoveryServerApplicationTests {
+class ConfigurationServerApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
