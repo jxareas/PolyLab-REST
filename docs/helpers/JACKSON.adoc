@@ -1,0 +1,5 @@
+= Jackson
+
+- **@JsonProperty** Specify access level using *JsonPropety.Access* to either WRITE_ONLY, READ_ONLY or a custom one.
+- **@JsonIgnore**: Ignore field from both request response.
+- **@JsonIncludeProperties**: provide the fields that you want to include in your dto response.

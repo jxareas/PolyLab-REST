@@ -1,0 +1,72 @@
+= Spring Data JPA
+
+- *@ManyToOne:* Used for Foreign Keys.
+- *@JoinColumn:* Using `name` to specify the column name in the parent table.
+This is not related with the actual name of the primary key in the foreign table.
+
+
+== Foreign Keys (`@ManyToOne`)
+
+[source,java]
+----
+public class Product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer idProduct;
+
+	@ManyToOne
+	@JoinColumn(name = "category_id",
+        foreignKey = @ForeignKey(name = "FK_PRODUCT_CATEGORY"),
+			nullable = false)
+	private Category category;
+}
+----
+
+== Relations (`@OneToMany`)
+
+[source, java]
+----
+public class Invoice {
+// The `mappedBy` references the name of the Java field present in `InvoiceDetails`
+@OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
+	private List<InvoiceDetails> invoiceDetails;
+}
+// ....
+public class InvoiceDetails {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer idInvoiceDetails;
+
+	@ManyToOne
+	@JoinColumn(name = InvoiceDetailsConstants.INVOICE_FK_COLUMN_NAME,
+			foreignKey = @ForeignKey(name = InvoiceConstants.INVOICE_FK_NAME),
+			nullable = false
+	)
+	private Invoice invoice;
+}
+----
+
+=== Many to Many Composite Keys
+
+It is necessary to create a Class annotated with `@Embeddable`, such as:
+
+[source,java]
+----
+@Embeddable
+public class OrderDetailsPk implements Serializable {
+
+	@ManyToOne
+	@JoinColumn(name = OrderDetailsPkConstants.ORDER_FK_COLUMN_NAME,
+			foreignKey = @ForeignKey(name = OrderDetailsPkConstants.ORDER_FK_NAME),
+			nullable = false)
+	private Order order;
+
+	@ManyToOne
+	@JoinColumn(name = OrderDetailsPkConstants.PRODUCT_FK_COLUMN_NAME,
+			foreignKey = @ForeignKey(name = OrderDetailsPkConstants.PRODUCT_FK_NAME),
+			nullable = false)
+	private Product product;
+
+}
+----

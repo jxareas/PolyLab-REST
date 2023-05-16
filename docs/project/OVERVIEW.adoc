@@ -1,0 +1,6 @@
+= Project Overview
+
+This project consists of developing a clinical laboratory information system that can be used by multiple users, following the DDD pattern and applying the concepts and knowledge acquired during the course, while keeping in mind the aim of solving the issues of concurrent programming and distributed programming.
+
+A laboratory information system (LIS) is a series of computer programs that process, store and manage data from all stages of medical processes and biochemical assays. Doctors and laboratory technicians use laboratory information systems to monitor a variety of inpatient and outpatient patients, including hematology, chemistry, immunology and microbiology.
+

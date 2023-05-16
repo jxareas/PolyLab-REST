@@ -1,0 +1,12 @@
+= Requirements
+
+
+
+*Maintenance Module:*
+
+* This module is responsible for maintaining all the system's lookup tables. Also, in this module is where patient and doctor data is added.
+* When adding patients, the module must allow entering the patient's residence and origin data (country and department), as well as their level of education, profession, contact information, gender, and religion.
+* When adding a doctor, the same data that is entered for the patient will be requested, with the difference that the doctor must have a MINSA code, which is a six-character alphanumeric code.
+* Screens must exist to add, modify, and delete countries and departments.
+* The module must allow adding, modifying, and deleting exams, normal exam values, exam profiles, creating exam profiles, professions, religions, and genders.
+* Exam profiles are the set of exams that make up a study (for example, the complete blood count or CBC consists of 27 exams).
