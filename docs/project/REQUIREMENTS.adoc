@@ -10,3 +10,59 @@
 * Screens must exist to add, modify, and delete countries and departments.
 * The module must allow adding, modifying, and deleting exams, normal exam values, exam profiles, creating exam profiles, professions, religions, and genders.
 * Exam profiles are the set of exams that make up a study (for example, the complete blood count or CBC consists of 27 exams).
+
+== Database Tables (Entities)
+[cols="1,1, 1"]
+|===
+|ID
+|Name
+|Language
+
+|1
+|Patients
+|Kotlin
+
+|2
+|Doctors
+|Kotlin
+
+|3
+|Country
+|Kotlin
+
+|4
+|Department
+|Kotlin
+
+|5
+|Municipality
+|Kotlin
+
+|6
+|Educational Level
+|Java
+
+|7
+|Profession
+|Kotlin
+
+|8
+|Contact Details
+|Java
+
+|9
+|Gender
+|Kotlin
+
+|10
+|Religion
+|Java
+
+|11
+|Exam
+|Java
+
+|12
+|Exam Profiles
+|Java
+
