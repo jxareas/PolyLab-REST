@@ -11,7 +11,7 @@
     <name>polylab</name>
     <description>POM parent for all spring boot projects</description>
     <modules>
-        <module>domain</module>
+        <module>pl-domain</module>
     </modules>
 
     <properties>
