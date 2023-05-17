@@ -4,13 +4,15 @@
 
 [source,java]
 ----
-public class Sexo {
+public class Pais {
     @Id
-    @Column(name = "IdSexo")
-    private int idSexo;
+    @Column(name = "IdPais")
+    private int idPais;
 
     @Column(name = "Descripcion")
     private String descripcion;
+
+    private int estado;
 }
 ----
 
@@ -18,9 +20,10 @@ public class Sexo {
 
 [source,sql]
 ----
-CREATE TABLE `tbl_cat_Sexo` (
-`IdSexo` int NOT NULL,
-`Descripcion` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-PRIMARY KEY (`IdSexo`)
+CREATE TABLE `tbl_cat_Pais` (
+                                `IdPais` int NOT NULL,
+                                `Descripcion` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Estado` int NOT NULL,
+                                PRIMARY KEY (`IdPais`)
 )
 ----
