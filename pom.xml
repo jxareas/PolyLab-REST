@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>3.0.5</spring-boot.version>
         <mysql.version>8.0.32</mysql.version>
-        <java-validation.version>2.0.1.Final</java-validation.version>
+        <java-validation.version>3.0.2</java-validation.version>
         <dockerfile-maven-version>1.4.13</dockerfile-maven-version>
     </properties>
     <dependencyManagement>
