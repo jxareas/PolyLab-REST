@@ -1,0 +1,87 @@
+= Exam
+
+== Entity
+
+[source,java]
+----
+public class Examen {
+
+    @Id
+    @Column(name = "IdExamen")
+    private int idExamen;
+
+    @Column(name = "IdAreaLabServicio")
+    private int idAreaLabServicio;
+
+    @Column(name = "IdMetodologia")
+    private int idMetodologia;
+
+    @Column(name = "IdCategoriaExamenes")
+    private int idCategoriaExamenes;
+
+    @Column(name = "IdTipoMuestra")
+    private int idTipoMuestra;
+
+    @Column(name = "IdUnidadMedidas")
+    private int idUnidadMedidas;
+
+    @Column(name = "IdTipoResultado")
+    private int idTipoResultado;
+
+    @Column(name = "Descripcion", length = 50)
+    private String descripcion;
+
+    @Column(name = "DescripcionCorta", length = 25)
+    private String descripcionCorta;
+
+    @Column(name = "LisCode", length = 10)
+    private String lisCode;
+
+    @Column(name = "Conteo", length = 1)
+    private String conteo;
+
+    @Column(name = "Confidencial", length = 1)
+    private String confidencial;
+
+    @Column(name = "Calculado", length = 1)
+    private String calculado;
+
+    @Column(name = "Estado")
+    private int estado;
+}
+----
+
+== DDL
+
+[source,sql]
+----
+CREATE TABLE `tbl_Examenes` (
+                                `IdExamen` int NOT NULL,
+                                `IdAreaLabServicio` int NOT NULL,
+                                `IdMetodologia` int NOT NULL,
+                                `IdCategoriaExamenes` int NOT NULL,
+                                `IdTipoMuestra` int NOT NULL,
+                                `IdUnidadMedidas` int NOT NULL,
+                                `IdTipoResultado` int NOT NULL,
+                                `Descripcion` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `DescripcionCorta` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `LisCode` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `Conteo` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Confidencial` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Calculado` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Estado` int NOT NULL,
+                                PRIMARY KEY (`IdExamen`),
+                                KEY `Reftbl_cat_TipoMuestra641` (`IdTipoMuestra`),
+                                KEY `Reftbl_cat_AreasLabServicio691` (`IdAreaLabServicio`),
+                                KEY `Reftbl_cat_Metodologia671` (`IdMetodologia`),
+                                KEY `Reftbl_cat_CategoriaExamenes651` (`IdCategoriaExamenes`),
+                                KEY `Reftbl_cat_TipoResultado611` (`IdTipoResultado`),
+                                KEY `Reftbl_cat_UnidadMedidas631` (`IdUnidadMedidas`),
+                                CONSTRAINT `Reftbl_cat_AreasLabServicio691` FOREIGN KEY (`IdAreaLabServicio`) REFERENCES `tbl_cat_AreasLabServicio` (`IdAreaLabServicio`),
+                                CONSTRAINT `Reftbl_cat_CategoriaExamenes651` FOREIGN KEY (`IdCategoriaExamenes`) REFERENCES `tbl_cat_CategoriaExamenes` (`IdCategoriaExamenes`),
+                                CONSTRAINT `Reftbl_cat_Metodologia671` FOREIGN KEY (`IdMetodologia`) REFERENCES `tbl_cat_Metodologia` (`IdMetodologia`),
+                                CONSTRAINT `Reftbl_cat_TipoMuestra641` FOREIGN KEY (`IdTipoMuestra`) REFERENCES `tbl_cat_TipoMuestra` (`IdTipoMuestra`),
+                                CONSTRAINT `Reftbl_cat_TipoResultado611` FOREIGN KEY (`IdTipoResultado`) REFERENCES `tbl_cat_TipoResultado` (`IdTipoResultado`),
+                                CONSTRAINT `Reftbl_cat_UnidadMedidas631` FOREIGN KEY (`IdUnidadMedidas`) REFERENCES `tbl_cat_UnidadMedidas` (`IdUnidadMedidas`)
+)
+----

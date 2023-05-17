@@ -52,6 +52,11 @@
             <version>${mysql.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.jxareas</groupId>
+            <artifactId>jx-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -94,10 +99,10 @@
     </dependencies>
 
     <modules>
-<!--        <module>SomeModule1</module>-->
-<!--        <module>SomeModule2</module>-->
-<!--        <module>SomeModule3</module>-->
-<!--        <module>SomeModule4</module>-->
-<!--        <module>SomeModule5</module>-->
+        <!--        <module>SomeModule1</module>-->
+        <!--        <module>SomeModule2</module>-->
+        <!--        <module>SomeModule3</module>-->
+        <!--        <module>SomeModule4</module>-->
+        <!--        <module>SomeModule5</module>-->
     </modules>
 </project>

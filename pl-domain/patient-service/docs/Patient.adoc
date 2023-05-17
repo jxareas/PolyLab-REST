@@ -1,0 +1,164 @@
+= Patient
+
+== Entity
+
+[source, java]
+----
+public class Paciente {
+    @Id
+    @Column(name = "IdPaciente")
+    private int idPaciente;
+
+    @Column(name = "IdIdentificacion")
+    private int idIdentificacion;
+
+    @Column(name = "NumIdentificacion")
+    private String numIdentificacion;
+
+    @Column(name = "NumExpediente")
+    private int numExpediente;
+
+    @Column(name = "NumINSS")
+    private String numINSS;
+
+    @Column(name = "IdEstadoCivil")
+    private int idEstadoCivil;
+
+    @Column(name = "Email")
+    private String email;
+
+    @Column(name = "IdSexo")
+    private int idSexo;
+
+    @Column(name = "IdNacionalidad")
+    private int idNacionalidad;
+
+    @Column(name = "IdPaisNac")
+    private int idPaisNac;
+
+    @Column(name = "IdDepartamentoNac")
+    private int idDepartamentoNac;
+
+    @Column(name = "IdMunicipioNac")
+    private int idMunicipioNac;
+
+    @Column(name = "IdPaisRes")
+    private int idPaisRes;
+
+    @Column(name = "IdDepartamentoRes")
+    private int idDepartamentoRes;
+
+    @Column(name = "IdMunicipioRes")
+    private int idMunicipioRes;
+
+    @Column(name = "IdTipoSangre")
+    private int idTipoSangre;
+
+    @Column(name = "IdProfesiones")
+    private int idProfesiones;
+
+    @Column(name = "idReligion")
+    private int idReligion;
+
+    @Column(name = "PrimerNombre")
+    private String primerNombre;
+
+    @Column(name = "SegundoNombre")
+    private String segundoNombre;
+
+    @Column(name = "PrimerApellido")
+    private String primerApellido;
+
+    @Column(name = "SegundoApellido")
+    private String segundoApellido;
+
+    @Column(name = "FechaNac")
+    private java.sql.Date fechaNac;
+
+    @Column(name = "DireccionDomiciliar")
+    private String direccionDomiciliar;
+
+    @Column(name = "TelefonoDomiciliar")
+    private String telefonoDomiciliar;
+
+    @Column(name = "TelefonoMovil")
+    private String telefonoMovil;
+
+    @Column(name = "Activo")
+    private String activo;
+
+    @Column(name = "Emabrazada")
+    private String emabrazada;
+
+    @Column(name = "Fallecido")
+    private String fallecido;
+
+    @Column(name = "Estado")
+    private int estado;
+}
+----
+
+
+== DDL
+
+[source, sql]
+----
+CREATE TABLE `tbl_Paciente` (
+`IdPaciente` int NOT NULL,
+`IdIdentificacion` int NOT NULL,
+`NumIdentificacion` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`NumExpediente` int NOT NULL,
+`NumINSS` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`IdEstadoCivil` int NOT NULL,
+`Email` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`IdSexo` int NOT NULL,
+`IdNacionalidad` int NOT NULL,
+`IdPaisNac` int NOT NULL,
+`IdDepartamentoNac` int NOT NULL,
+`IdMunicipioNac` int NOT NULL,
+`IdPaisRes` int NOT NULL,
+`IdDepartamentoRes` int NOT NULL,
+`IdMunicipioRes` int NOT NULL,
+`IdTipoSangre` int NOT NULL,
+`IdProfesiones` int NOT NULL,
+`idReligion` int NOT NULL,
+`PrimerNombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+`SegundoNombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`PrimerApellido` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+`SegundoApellido` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`FechaNac` date NOT NULL,
+`DireccionDomiciliar` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+`TelefonoDomiciliar` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`TelefonoMovil` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`Activo` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+`Emabrazada` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`Fallecido` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+`Estado` int NOT NULL,
+PRIMARY KEY (`IdPaciente`),
+KEY `Reftbl_cat_Pais821` (`IdPaisNac`),
+KEY `Reftbl_cat_Pais831` (`IdPaisRes`),
+KEY `Reftbl_cat_Departamento841` (`IdDepartamentoNac`),
+KEY `Reftbl_cat_Departamento851` (`IdDepartamentoRes`),
+KEY `Reftbl_cat_Municipio871` (`IdMunicipioRes`),
+KEY `Reftbl_cat_Nacionalidad801` (`IdNacionalidad`),
+KEY `Reftbl_cat_Municipio861` (`IdMunicipioNac`),
+KEY `Reftbl_cat_EstadoCivil881` (`IdEstadoCivil`),
+KEY `Reftbl_cat_Identificacion791` (`IdIdentificacion`),
+KEY `Reftbl_cat_Sexo811` (`IdSexo`),
+KEY `Reftbl_cat_TipoSangre1041` (`IdTipoSangre`),
+KEY `Reftbl_cat_Profesiones901` (`IdProfesiones`),
+KEY `paciente_religion_idx` (`idReligion`),
+CONSTRAINT `paciente_religion` FOREIGN KEY (`idReligion`) REFERENCES `tblCatReligion` (`idReligion`) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT `Reftbl_cat_Departamento841` FOREIGN KEY (`IdDepartamentoNac`) REFERENCES `tbl_cat_Departamento` (`IdDepartamento`),
+CONSTRAINT `Reftbl_cat_Departamento851` FOREIGN KEY (`IdDepartamentoRes`) REFERENCES `tbl_cat_Departamento` (`IdDepartamento`),
+CONSTRAINT `Reftbl_cat_EstadoCivil881` FOREIGN KEY (`IdEstadoCivil`) REFERENCES `tbl_cat_EstadoCivil` (`IdEstadoCivil`),
+CONSTRAINT `Reftbl_cat_Identificacion791` FOREIGN KEY (`IdIdentificacion`) REFERENCES `tbl_cat_Identificacion` (`IdIdentificacion`),
+CONSTRAINT `Reftbl_cat_Municipio861` FOREIGN KEY (`IdMunicipioNac`) REFERENCES `tbl_cat_Municipio` (`IdMunicipio`),
+CONSTRAINT `Reftbl_cat_Municipio871` FOREIGN KEY (`IdMunicipioRes`) REFERENCES `tbl_cat_Municipio` (`IdMunicipio`),
+CONSTRAINT `Reftbl_cat_Nacionalidad801` FOREIGN KEY (`IdNacionalidad`) REFERENCES `tbl_cat_Nacionalidad` (`IdNacionalidad`),
+CONSTRAINT `Reftbl_cat_Pais821` FOREIGN KEY (`IdPaisNac`) REFERENCES `tbl_cat_Pais` (`IdPais`),
+CONSTRAINT `Reftbl_cat_Pais831` FOREIGN KEY (`IdPaisRes`) REFERENCES `tbl_cat_Pais` (`IdPais`),
+CONSTRAINT `Reftbl_cat_Profesiones901` FOREIGN KEY (`IdProfesiones`) REFERENCES `tbl_cat_Profesiones` (`IdProfesiones`),
+CONSTRAINT `Reftbl_cat_Sexo811` FOREIGN KEY (`IdSexo`) REFERENCES `tbl_cat_Sexo` (`IdSexo`),
+CONSTRAINT `Reftbl_cat_TipoSangre1041` FOREIGN KEY (`IdTipoSangre`) REFERENCES `tbl_cat_TipoSangre` (`IdTipoSangre`)
+----

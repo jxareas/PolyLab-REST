@@ -1,0 +1,110 @@
+= Doctor
+
+== Entity
+
+[source,java]
+----
+public class Doctor {
+      private int idEmpleado;
+    private int idProfesiones;
+    private Integer idUsuarioCreacion;
+    private Integer idUsuarioEliminacion;
+    private Integer idUsuarioModificacion;
+    private Date fechaCreacion;
+    private Date fechaModificacion;
+    private Date fechaEliminacion;
+    private int idMunicipioRes;
+    private int idMunicipioNac;
+    private int idDepartamentoNac;
+    private int idDepartamentoRes;
+    private int idPaisNac;
+    private int idPaisRes;
+    private int idIdentificacion;
+    private int idEstadoCivil;
+    private int idSexo;
+    private int idNacionalidad;
+    private String numIdentificacion;
+    private String numINSS;
+    private String codMinsa;
+    private String primerNombre;
+    private String segundoNombre;
+    private String primerApellido;
+    private String segundoApellido;
+    private Date fechaNac;
+    private String edadIngreso;
+    private String email;
+    private String direccionDomiciliar;
+    private String telefonoDomiciliar;
+    private String telefonoMovil;
+    private Date fechaContrato;
+    private String urlFoto;
+    private String activo;
+    private int estado;
+}
+----
+
+== DDL
+
+[source,sql]
+----
+CREATE TABLE `tbl_Empleado` (
+                                `IdEmpleado` int NOT NULL,
+                                `IdProfesiones` int NOT NULL,
+                                `IdUsuarioCreacion` int DEFAULT NULL,
+                                `IdUsuarioEliminacion` int DEFAULT NULL,
+                                `IdUsuarioModificacion` int DEFAULT NULL,
+                                `FechaCreacion` datetime(6) DEFAULT NULL,
+                                `FechaModificacion` datetime(6) DEFAULT NULL,
+                                `FechaEliminacion` datetime(6) DEFAULT NULL,
+                                `IdMunicipioRes` int NOT NULL,
+                                `IdMunicipioNac` int NOT NULL,
+                                `IdDepartamentoNac` int NOT NULL,
+                                `IdDepartamentoRes` int NOT NULL,
+                                `IdPaisNac` int NOT NULL,
+                                `IdPaisRes` int NOT NULL,
+                                `IdIdentificacion` int NOT NULL,
+                                `IdEstadoCivil` int NOT NULL,
+                                `IdSexo` int NOT NULL,
+                                `IdNacionalidad` int NOT NULL,
+                                `NumIdentificacion` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `NumINSS` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `CodMinsa` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `PrimerNombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `SegundoNombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `PrimerApellido` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `SegundoApellido` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `FechaNac` date NOT NULL,
+                                `EdadIngreso` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Email` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `DireccionDomiciliar` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `TelefonoDomiciliar` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `TelefonoMovil` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `FechaContrato` date DEFAULT NULL,
+                                `UrlFoto` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                                `Activo` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Estado` int NOT NULL,
+                                PRIMARY KEY (`IdEmpleado`),
+                                KEY `Reftbl_cat_Nacionalidad91` (`IdNacionalidad`),
+                                KEY `Reftbl_cat_Identificacion81` (`IdIdentificacion`),
+                                KEY `Reftbl_cat_Sexo61` (`IdSexo`),
+                                KEY `Reftbl_cat_Profesiones981` (`IdProfesiones`),
+                                KEY `Reftbl_cat_Pais211` (`IdPaisRes`),
+                                KEY `Reftbl_cat_Pais221` (`IdPaisNac`),
+                                KEY `Reftbl_cat_Departamento231` (`IdDepartamentoRes`),
+                                KEY `Reftbl_cat_Departamento241` (`IdDepartamentoNac`),
+                                KEY `Reftbl_cat_Municipio251` (`IdMunicipioNac`),
+                                KEY `Reftbl_cat_Municipio261` (`IdMunicipioRes`),
+                                KEY `Reftbl_cat_EstadoCivil71` (`IdEstadoCivil`),
+                                CONSTRAINT `Reftbl_cat_Departamento231` FOREIGN KEY (`IdDepartamentoRes`) REFERENCES `tbl_cat_Departamento` (`IdDepartamento`),
+                                CONSTRAINT `Reftbl_cat_Departamento241` FOREIGN KEY (`IdDepartamentoNac`) REFERENCES `tbl_cat_Departamento` (`IdDepartamento`),
+                                CONSTRAINT `Reftbl_cat_EstadoCivil71` FOREIGN KEY (`IdEstadoCivil`) REFERENCES `tbl_cat_EstadoCivil` (`IdEstadoCivil`),
+                                CONSTRAINT `Reftbl_cat_Identificacion81` FOREIGN KEY (`IdIdentificacion`) REFERENCES `tbl_cat_Identificacion` (`IdIdentificacion`),
+                                CONSTRAINT `Reftbl_cat_Municipio251` FOREIGN KEY (`IdMunicipioNac`) REFERENCES `tbl_cat_Municipio` (`IdMunicipio`),
+                                CONSTRAINT `Reftbl_cat_Municipio261` FOREIGN KEY (`IdMunicipioRes`) REFERENCES `tbl_cat_Municipio` (`IdMunicipio`),
+                                CONSTRAINT `Reftbl_cat_Nacionalidad91` FOREIGN KEY (`IdNacionalidad`) REFERENCES `tbl_cat_Nacionalidad` (`IdNacionalidad`),
+                                CONSTRAINT `Reftbl_cat_Pais211` FOREIGN KEY (`IdPaisRes`) REFERENCES `tbl_cat_Pais` (`IdPais`),
+                                CONSTRAINT `Reftbl_cat_Pais221` FOREIGN KEY (`IdPaisNac`) REFERENCES `tbl_cat_Pais` (`IdPais`),
+                                CONSTRAINT `Reftbl_cat_Profesiones981` FOREIGN KEY (`IdProfesiones`) REFERENCES `tbl_cat_Profesiones` (`IdProfesiones`),
+                                CONSTRAINT `Reftbl_cat_Sexo61` FOREIGN KEY (`IdSexo`) REFERENCES `tbl_cat_Sexo` (`IdSexo`)
+)
+----

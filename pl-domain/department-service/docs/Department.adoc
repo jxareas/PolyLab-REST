@@ -1,0 +1,34 @@
+= Department
+
+== Entity
+
+[source,java]
+----
+public class Departamento {
+    @Id
+    @Column(name = "IdDepartamento")
+    private int idDepartamento;
+
+    @Column(name = "IdPais")
+    private int idPais;
+
+    @Column(name = "Descripcion")
+    private String descripcion;
+
+    @Column(name = "Estado")
+    private int estado;
+}
+----
+
+== DDL
+
+[source,sql]
+----
+CREATE TABLE `tbl_cat_Departamento` (
+`IdDepartamento` int NOT NULL,
+`IdPais` int NOT NULL,
+`Descripcion` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+`Estado` int NOT NULL,
+PRIMARY KEY (`IdDepartamento`)
+)
+----

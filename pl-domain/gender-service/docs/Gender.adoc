@@ -1,0 +1,27 @@
+= Gender
+
+== Entity
+
+[source, java]
+----
+public class Sexo {
+    @Id
+    @Column(name = "IdSexo")
+    private int idSexo;
+
+    @Column(name = "Descripcion")
+    private String descripcion;
+}
+----
+
+
+== DDL
+
+[source, sql]
+----
+CREATE TABLE `tbl_cat_Sexo` (
+`IdSexo` int NOT NULL,
+`Descripcion` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+PRIMARY KEY (`IdSexo`)
+)
+----
