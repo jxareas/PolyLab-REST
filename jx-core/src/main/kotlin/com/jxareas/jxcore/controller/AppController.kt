@@ -14,9 +14,9 @@ interface AppController<DTO, ID> {
     @PostMapping
     fun save(@RequestBody dto: DTO): ResponseEntity<DTO>
 
-    @PutMapping
-    fun update(@RequestBody dto: DTO): ResponseEntity<DTO>
+    @PutMapping("/{id}")
+    fun update(@PathVariable("id") id: ID, @RequestBody dto: DTO ): ResponseEntity<DTO>
 
     @DeleteMapping("/{id}")
-    fun delete(@PathVariable("id") id: ID)
+    fun delete(@PathVariable("id") id: ID): ResponseEntity<Void>
 }

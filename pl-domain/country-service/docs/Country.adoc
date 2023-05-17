@@ -4,13 +4,19 @@
 
 [source,java]
 ----
-public class Sexo {
+public class Country {
     @Id
-    @Column(name = "IdSexo")
-    private int idSexo;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = CountryConstants.COUNTRY_ID_FIELD, nullable = false)
+    private Integer countryId;
 
-    @Column(name = "Descripcion")
-    private String descripcion;
+    @Column(name = CountryConstants.DESCRIPTION_FIELD,
+        length = CountryConstants.DESCRIPTION_MAX_LENGTH,
+        nullable = false)
+    private String description;
+
+    @Column(name = CountryConstants.STATUS_FIELD, nullable = false)
+    private Integer status;
 }
 ----
 
@@ -18,9 +24,10 @@ public class Sexo {
 
 [source,sql]
 ----
-CREATE TABLE `tbl_cat_Sexo` (
-`IdSexo` int NOT NULL,
-`Descripcion` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-PRIMARY KEY (`IdSexo`)
+CREATE TABLE `tbl_cat_Pais` (
+                                `IdPais` int NOT NULL,
+                                `Descripcion` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                                `Estado` int NOT NULL,
+                                PRIMARY KEY (`IdPais`)
 )
 ----

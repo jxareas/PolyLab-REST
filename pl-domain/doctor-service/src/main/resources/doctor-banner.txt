@@ -1,0 +1,12 @@
+oooooooooo.                           .
+`888'   `Y8b                        .o8
+ 888      888  .ooooo.   .ooooo.  .o888oo  .ooooo.  oooo d8b
+ 888      888 d88' `88b d88' `"Y8   888   d88' `88b `888""8P
+ 888      888 888   888 888         888   888   888  888
+ 888     d88' 888   888 888   .o8   888 . 888   888  888
+o888bood8P'   `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
+
+
+${application.title} ${application.formatted-version}
+Powered by Spring Boot ${spring-boot.version}
+Developed by Jon Areas

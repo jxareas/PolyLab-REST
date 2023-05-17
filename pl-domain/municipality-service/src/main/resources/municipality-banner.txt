@@ -1,0 +1,14 @@
+ooo        ooooo                          o8o             o8o                       oooo   o8o      .
+`88.       .888'                          `"'             `"'                       `888   `"'    .o8
+ 888b     d'888  oooo  oooo  ooo. .oo.   oooo   .ooooo.  oooo  oo.ooooo.   .oooo.    888  oooo  .o888oo oooo    ooo
+ 8 Y88. .P  888  `888  `888  `888P"Y88b  `888  d88' `"Y8 `888   888' `88b `P  )88b   888  `888    888    `88.  .8'
+ 8  `888'   888   888   888   888   888   888  888        888   888   888  .oP"888   888   888    888     `88..8'
+ 8    Y     888   888   888   888   888   888  888   .o8  888   888   888 d8(  888   888   888    888 .    `888'
+o8o        o888o  `V88V"V8P' o888o o888o o888o `Y8bod8P' o888o  888bod8P' `Y888""8o o888o o888o   "888"     .8'
+                                                                888                                     .o..P'
+                                                               o888o                                    `Y8P'
+
+
+ ${application.title} ${application.formatted-version}
+ Powered by Spring Boot ${spring-boot.version}
+ Developed by Jon Areas

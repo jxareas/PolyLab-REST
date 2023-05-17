@@ -7,16 +7,21 @@ abstract class CrudDomainService<T : Any, ID : Any>(private val repository: Defa
     DomainService<T, ID> {
     override fun save(entity: T): T = repository.save(entity)
 
-    override fun update(entity: T, id: ID): T = repository
-        .findByIdOrThrow(id) { ResourceNotFoundException }
-        .apply(repository::save)
+    override fun update(entity: T, id: ID): T  {
+        val updatedEntity = repository.findById(id)
+        if(updatedEntity.isPresent) {
+            return repository.save(entity)
+        } else throw ResourceNotFoundException
+    }
 
     override fun getAll(): List<T> = repository.findAll()
 
     override fun getById(id: ID): T =
-        repository.findByIdOrThrow(id) { ResourceNotFoundException }
+        repository.findById(id).orElseThrow { ResourceNotFoundException }
 
-    override fun deleteById(id: ID) = repository.findOrThrowWithId(id) { ResourceNotFoundException }
-        .let(repository::deleteById)
+    override fun deleteById(id: ID) {
+        val entity = repository.findById(id).orElseThrow { ResourceNotFoundException }
+        repository.delete(entity)
+    }
 
 }
