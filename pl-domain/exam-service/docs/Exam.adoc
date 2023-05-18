@@ -9,7 +9,7 @@ public class Examen {
     @Id
     @Column(name = "IdExamen")
     private int idExamen;
-
+1
     @Column(name = "IdAreaLabServicio")
     private int idAreaLabServicio;
 

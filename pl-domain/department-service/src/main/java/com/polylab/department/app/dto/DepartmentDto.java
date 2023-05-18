@@ -32,12 +32,12 @@ public class DepartmentDto implements Identifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getId() {
+    public Integer getIdentifier() {
         return departmentId;
     }
 
     @Override
-    public void setId(Integer identifier) {
+    public void setIdentifier(Integer identifier) {
         departmentId = identifier;
     }
 }

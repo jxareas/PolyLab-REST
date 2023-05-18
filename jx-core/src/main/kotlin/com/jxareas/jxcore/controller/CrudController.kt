@@ -19,8 +19,8 @@ abstract class CrudController<DTO : Identifiable<ID>, T, ID : Any>(
             }
 
     override fun update(id: ID, dto: DTO): ResponseEntity<DTO> {
-        dto.id = id
-        val entity = domainService.update(mapper.mapTo(dto), dto.id)
+        dto.identifier = id
+        val entity = domainService.update(mapper.mapTo(dto), dto.identifier)
         val updatedData = mapper.mapFrom(entity)
         return ResponseEntity.ok(updatedData)
     }
@@ -28,7 +28,7 @@ abstract class CrudController<DTO : Identifiable<ID>, T, ID : Any>(
     override fun save(dto: DTO): ResponseEntity<DTO> {
         val entity = domainService.save(mapper.mapTo(dto))
         val createdResource = mapper.mapFrom(entity)
-        val resourceLocation = UriResourceHelper.withId(createdResource.id)
+        val resourceLocation = UriResourceHelper.withId(createdResource.identifier)
         return ResponseEntityHelper.createdWithLocation(location = resourceLocation, body = createdResource)
     }
 

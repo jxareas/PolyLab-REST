@@ -26,12 +26,12 @@ public class GenderDto implements Identifiable<Integer> {
     private String description;
 
     @Override
-    public Integer getId() {
+    public Integer getIdentifier() {
         return genderId;
     }
 
     @Override
-    public void setId(Integer identifier) {
+    public void setIdentifier(Integer identifier) {
         genderId = identifier;
     }
 }
