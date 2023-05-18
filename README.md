@@ -53,7 +53,7 @@ requires [JDK 17](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/dow
 If you have that installed you can just clone the repository by entering:
 
 ```bash
-git clone https://github.com/jxareas/jLab.git
+git clone https://github.com/jxareas/PolyLab.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,6 +1,6 @@
 package com.polylab.countries.domain.service;
 
-import com.jxareas.jxcore.service.CrudDomainService;
+import com.jxareas.jxcore.domain.service.CrudDomainService;
 import com.polylab.countries.persistence.model.Country;
 import com.polylab.countries.persistence.repository.CountryRepository;
 import org.springframework.stereotype.Service;

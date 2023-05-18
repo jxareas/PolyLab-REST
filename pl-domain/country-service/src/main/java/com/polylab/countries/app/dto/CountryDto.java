@@ -2,7 +2,7 @@ package com.polylab.countries.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.model.Identifiable;
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.countries.common.constants.CountryConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

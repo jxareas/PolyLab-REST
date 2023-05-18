@@ -1,6 +1,6 @@
 package com.polylab.patients.app.controller;
 
-import com.jxareas.jxcore.controller.CrudController;
+import com.jxareas.jxcore.app.controller.CrudController;
 import com.polylab.patients.app.dto.PatientDto;
 import com.polylab.patients.app.mapper.PatientDtoMapper;
 import com.polylab.patients.domain.service.PatientService;

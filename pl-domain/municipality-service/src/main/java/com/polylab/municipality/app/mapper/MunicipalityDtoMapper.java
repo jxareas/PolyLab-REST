@@ -1,6 +1,6 @@
 package com.polylab.municipality.app.mapper;
 
-import com.jxareas.jxcore.mapper.TwoWayMapper;
+import com.jxareas.jxcore.core.mapper.TwoWayMapper;
 import com.polylab.municipality.app.dto.MunicipalityDto;
 import com.polylab.municipality.persistence.model.Municipality;
 import lombok.RequiredArgsConstructor;

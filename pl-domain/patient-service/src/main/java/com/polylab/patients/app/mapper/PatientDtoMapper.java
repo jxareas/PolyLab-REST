@@ -1,6 +1,6 @@
 package com.polylab.patients.app.mapper;
 
-import com.jxareas.jxcore.mapper.TwoWayMapper;
+import com.jxareas.jxcore.core.mapper.TwoWayMapper;
 import com.polylab.patients.app.dto.PatientDto;
 import com.polylab.patients.persistence.model.Patient;
 import lombok.RequiredArgsConstructor;

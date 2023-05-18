@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "7eed1c4c-b92b-4634-8a57-9fcbfa3ee309",
+		"name": "PolyLab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19170515"
+	},
+	"item": [
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlCountry}}/{{country}}",
+							"host": [
+								"{{urlCountry}}"
+							],
+							"path": [
+								"{{country}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlCountry}}/{{country}}/1",
+							"host": [
+								"{{urlCountry}}"
+							],
+							"path": [
+								"{{country}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlCountry}}/{{country}}",
+							"host": [
+								"{{urlCountry}}"
+							],
+							"path": [
+								"{{country}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlCountry}}/{{country}}/1",
+							"host": [
+								"{{urlCountry}}"
+							],
+							"path": [
+								"{{country}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlCountry}}/{{country}}/2",
+							"host": [
+								"{{urlCountry}}"
+							],
+							"path": [
+								"{{country}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlDepartment}}/{{department}}",
+							"host": [
+								"{{urlDepartment}}"
+							],
+							"path": [
+								"{{department}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlDepartment}}/{{department}}",
+							"host": [
+								"{{urlDepartment}}"
+							],
+							"path": [
+								"{{department}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDepartment}}/{{department}}",
+							"host": [
+								"{{urlDepartment}}"
+							],
+							"path": [
+								"{{department}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDepartment}}/{{department}}/1",
+							"host": [
+								"{{urlDepartment}}"
+							],
+							"path": [
+								"{{department}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlDepartment}}/{{department}}/2",
+							"host": [
+								"{{urlDepartment}}"
+							],
+							"path": [
+								"{{department}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlDoctor}}/{{doctor}}",
+							"host": [
+								"{{urlDoctor}}"
+							],
+							"path": [
+								"{{doctor}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlDoctor}}/{{doctor}}/1",
+							"host": [
+								"{{urlDoctor}}"
+							],
+							"path": [
+								"{{doctor}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDoctor}}/{{doctor}}",
+							"host": [
+								"{{urlDoctor}}"
+							],
+							"path": [
+								"{{doctor}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDoctor}}/{{doctor}}/1",
+							"host": [
+								"{{urlDoctor}}"
+							],
+							"path": [
+								"{{doctor}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlDoctor}}/{{doctor}}/2",
+							"host": [
+								"{{urlDoctor}}"
+							],
+							"path": [
+								"{{doctor}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exams",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlExam}}/{{exam}}",
+							"host": [
+								"{{urlExam}}"
+							],
+							"path": [
+								"{{exam}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlExam}}/{{exam}}/1",
+							"host": [
+								"{{urlExam}}"
+							],
+							"path": [
+								"{{exam}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlExam}}/{{exam}}",
+							"host": [
+								"{{urlExam}}"
+							],
+							"path": [
+								"{{exam}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlExam}}/{{exam}}/1",
+							"host": [
+								"{{urlExam}}"
+							],
+							"path": [
+								"{{exam}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlExam}}/{{exam}}/2",
+							"host": [
+								"{{urlExam}}"
+							],
+							"path": [
+								"{{exam}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genders",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGender}}/{{gender}}",
+							"host": [
+								"{{urlGender}}"
+							],
+							"path": [
+								"{{gender}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGender}}/{{gender}}/1",
+							"host": [
+								"{{urlGender}}"
+							],
+							"path": [
+								"{{gender}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGender}}/{{gender}}",
+							"host": [
+								"{{urlGender}}"
+							],
+							"path": [
+								"{{gender}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGender}}/{{gender}}/1",
+							"host": [
+								"{{urlGender}}"
+							],
+							"path": [
+								"{{gender}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlGender}}/{{gender}}/2",
+							"host": [
+								"{{urlGender}}"
+							],
+							"path": [
+								"{{gender}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Municipalities",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlMunicipality}}/{{municipality}}",
+							"host": [
+								"{{urlMunicipality}}"
+							],
+							"path": [
+								"{{municipality}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlMunicipality}}/{{municipality}}/1",
+							"host": [
+								"{{urlMunicipality}}"
+							],
+							"path": [
+								"{{municipality}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlMunicipality}}/{{municipality}}",
+							"host": [
+								"{{urlMunicipality}}"
+							],
+							"path": [
+								"{{municipality}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlMunicipality}}/{{municipality}}/1",
+							"host": [
+								"{{urlMunicipality}}"
+							],
+							"path": [
+								"{{municipality}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlMunicipality}}/{{municipality}}/2",
+							"host": [
+								"{{urlMunicipality}}"
+							],
+							"path": [
+								"{{municipality}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlPatient}}/{{patient}}",
+							"host": [
+								"{{urlPatient}}"
+							],
+							"path": [
+								"{{patient}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlPatient}}/{{patient}}/1",
+							"host": [
+								"{{urlPatient}}"
+							],
+							"path": [
+								"{{patient}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Bosnia\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlPatient}}/{{patient}}",
+							"host": [
+								"{{urlPatient}}"
+							],
+							"path": [
+								"{{patient}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Republika Sprska\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlPatient}}/{{patient}}/1",
+							"host": [
+								"{{urlPatient}}"
+							],
+							"path": [
+								"{{patient}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlPatient}}/{{patient}}/2",
+							"host": [
+								"{{urlPatient}}"
+							],
+							"path": [
+								"{{patient}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlCountry",
+			"value": "localhost:8081/v1",
+			"type": "string"
+		},
+		{
+			"key": "country",
+			"value": "countries",
+			"type": "string"
+		},
+		{
+			"key": "urlDepartment",
+			"value": "localhost:8082/v1",
+			"type": "string"
+		},
+		{
+			"key": "department",
+			"value": "departments",
+			"type": "string"
+		},
+		{
+			"key": "urlDoctor",
+			"value": "localhost:8083/v1",
+			"type": "string"
+		},
+		{
+			"key": "doctor",
+			"value": "doctors",
+			"type": "string"
+		},
+		{
+			"key": "urlExam",
+			"value": "localhost:8084/v1",
+			"type": "string"
+		},
+		{
+			"key": "exam",
+			"value": "exams",
+			"type": "string"
+		},
+		{
+			"key": "urlGender",
+			"value": "localhost:8085/v1",
+			"type": "string"
+		},
+		{
+			"key": "gender",
+			"value": "genders",
+			"type": "string"
+		},
+		{
+			"key": "urlMunicipality",
+			"value": "localhost:8086/v1",
+			"type": "string"
+		},
+		{
+			"key": "municipality",
+			"value": "municipalities",
+			"type": "string"
+		},
+		{
+			"key": "urlPatient",
+			"value": "localhost:8087/v1",
+			"type": "string"
+		},
+		{
+			"key": "patient",
+			"value": "patients",
+			"type": "string"
+		}
+	]
+}

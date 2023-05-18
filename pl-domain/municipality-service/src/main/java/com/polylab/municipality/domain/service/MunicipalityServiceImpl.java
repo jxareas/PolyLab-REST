@@ -1,6 +1,6 @@
 package com.polylab.municipality.domain.service;
 
-import com.jxareas.jxcore.service.CrudDomainService;
+import com.jxareas.jxcore.domain.service.CrudDomainService;
 import com.polylab.municipality.persistence.model.Municipality;
 import com.polylab.municipality.persistence.repository.MunicipalityRepository;
 import org.springframework.stereotype.Service;

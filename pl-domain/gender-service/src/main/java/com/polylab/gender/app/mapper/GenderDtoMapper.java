@@ -1,6 +1,6 @@
 package com.polylab.gender.app.mapper;
 
-import com.jxareas.jxcore.mapper.TwoWayMapper;
+import com.jxareas.jxcore.core.mapper.TwoWayMapper;
 import com.polylab.gender.app.dto.GenderDto;
 import com.polylab.gender.persistence.model.Gender;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
 package com.polylab.countries.app.controller;
 
-import com.jxareas.jxcore.controller.CrudController;
+import com.jxareas.jxcore.app.controller.CrudController;
 import com.polylab.countries.app.dto.CountryDto;
 import com.polylab.countries.app.mapper.CountryDtoMapper;
 import com.polylab.countries.domain.service.CountryService;
@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Countries", description = "Registered countries.")
 public class CountryControllerImpl extends CrudController<CountryDto, Country, Integer> implements CountryController {
 
-    public CountryControllerImpl(CountryService domainService,
-                                 CountryDtoMapper mapper) {
+    public CountryControllerImpl(CountryService domainService, CountryDtoMapper mapper) {
         super(domainService, mapper);
     }
 }

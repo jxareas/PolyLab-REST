@@ -1,6 +1,6 @@
 package com.polylab.municipality.app.controller;
 
-import com.jxareas.jxcore.controller.CrudController;
+import com.jxareas.jxcore.app.controller.CrudController;
 import com.polylab.municipality.app.dto.MunicipalityDto;
 import com.polylab.municipality.app.mapper.MunicipalityDtoMapper;
 import com.polylab.municipality.domain.service.MunicipalityService;

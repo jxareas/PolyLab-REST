@@ -1,6 +1,6 @@
 package com.polylab.gender.app.controller;
 
-import com.jxareas.jxcore.controller.CrudController;
+import com.jxareas.jxcore.app.controller.CrudController;
 import com.polylab.gender.app.dto.GenderDto;
 import com.polylab.gender.app.mapper.GenderDtoMapper;
 import com.polylab.gender.domain.service.GenderService;

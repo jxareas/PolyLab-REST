@@ -1,6 +1,6 @@
 package com.polylab.countries.app.mapper;
 
-import com.jxareas.jxcore.mapper.TwoWayMapper;
+import com.jxareas.jxcore.core.mapper.TwoWayMapper;
 import com.polylab.countries.app.dto.CountryDto;
 import com.polylab.countries.persistence.model.Country;
 import lombok.RequiredArgsConstructor;

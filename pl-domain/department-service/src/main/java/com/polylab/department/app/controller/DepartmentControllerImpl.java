@@ -1,6 +1,6 @@
 package com.polylab.department.app.controller;
 
-import com.jxareas.jxcore.controller.CrudController;
+import com.jxareas.jxcore.app.controller.CrudController;
 import com.polylab.department.app.dto.DepartmentDto;
 import com.polylab.department.app.mapper.DepartmentDtoMapper;
 import com.polylab.department.domain.service.DepartmentService;

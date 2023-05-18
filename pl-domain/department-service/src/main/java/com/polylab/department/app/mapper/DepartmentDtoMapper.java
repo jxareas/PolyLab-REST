@@ -1,6 +1,6 @@
 package com.polylab.department.app.mapper;
 
-import com.jxareas.jxcore.mapper.TwoWayMapper;
+import com.jxareas.jxcore.core.mapper.TwoWayMapper;
 import com.polylab.department.app.dto.DepartmentDto;
 import com.polylab.department.persistence.model.Department;
 import lombok.RequiredArgsConstructor;

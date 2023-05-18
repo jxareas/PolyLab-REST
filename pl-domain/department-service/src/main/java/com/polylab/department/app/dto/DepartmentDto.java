@@ -1,7 +1,7 @@
 package com.polylab.department.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.model.Identifiable;
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.department.common.constants.DepartmentConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

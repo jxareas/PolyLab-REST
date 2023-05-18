@@ -110,10 +110,12 @@
     </dependencies>
 
     <modules>
-        <!--        <module>SomeModule1</module>-->
-        <!--        <module>SomeModule2</module>-->
-        <!--        <module>SomeModule3</module>-->
-        <!--        <module>SomeModule4</module>-->
-        <!--        <module>SomeModule5</module>-->
+        <module>country-service</module>
+        <module>department-service</module>
+        <module>doctor-service</module>
+        <module>exam-service</module>
+        <module>gender-service</module>
+        <module>municipality-service</module>
+        <module>patient-service</module>
     </modules>
 </project>
