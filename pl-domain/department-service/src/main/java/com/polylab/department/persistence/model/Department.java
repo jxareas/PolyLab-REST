@@ -20,7 +20,7 @@ public class Department {
     @Column(name = DepartmentConstants.DEPARTMENT_ID_FIELD, unique = true, nullable = false)
     private Integer departmentId;
 
-    @Column(name = DepartmentConstants.COUNTRY_ID_FIELD, unique = true, nullable = false)
+    @Column(name = DepartmentConstants.COUNTRY_ID_FIELD, nullable = false)
     private Integer countryId;
 
     @Column(name = DepartmentConstants.DESCRIPTION_FIELD,

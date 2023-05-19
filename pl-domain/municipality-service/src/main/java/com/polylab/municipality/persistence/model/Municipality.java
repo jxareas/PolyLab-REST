@@ -20,7 +20,7 @@ public class Municipality {
     @Column(name = MunicipalityConstants.MUNICIPALITY_ID_FIELD, unique = true, nullable = false)
     private Integer municipalityId;
 
-    @Column(name = MunicipalityConstants.DEPARTMENT_ID_FIELD, unique = true, nullable = false)
+    @Column(name = MunicipalityConstants.DEPARTMENT_ID_FIELD, nullable = false)
     private Integer departmentId;
 
     @Column(name = MunicipalityConstants.DESCRIPTION_FIELD,

@@ -6,6 +6,7 @@ import com.jxareas.jxcore.core.mapper.TwoWayMapper
 import com.jxareas.jxcore.domain.model.Identifiable
 import com.jxareas.jxcore.domain.service.DomainService
 import org.springframework.http.ResponseEntity
+import java.io.Serializable
 
 /**
  * CRUD Controller provides a common implementation of CRUD (Create, Read, Update, Delete) operations for a specific application controller.
@@ -22,7 +23,7 @@ import org.springframework.http.ResponseEntity
  * @version 1.0
  * @since 2022-06-23
  */
-abstract class CrudController<DTO : Identifiable<ID>, T, ID : Any>(
+abstract class CrudController<DTO : Identifiable<ID>, T, ID : Serializable>(
     private val domainService: DomainService<T, ID>,
     private val mapper: TwoWayMapper<DTO, T>,
 ) : AppController<DTO, ID> {

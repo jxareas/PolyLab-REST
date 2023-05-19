@@ -17,4 +17,5 @@ public class CountryControllerImpl extends CrudController<CountryDto, Country, I
     public CountryControllerImpl(CountryService domainService, CountryDtoMapper mapper) {
         super(domainService, mapper);
     }
+
 }

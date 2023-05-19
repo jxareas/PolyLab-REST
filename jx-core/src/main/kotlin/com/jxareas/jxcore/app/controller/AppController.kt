@@ -1,6 +1,7 @@
 package com.jxareas.jxcore.app.controller
 
 import org.springframework.http.ResponseEntity
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
 
 
@@ -36,7 +37,7 @@ interface AppController<DTO, ID> {
      * @return A ResponseEntity containing the DTO of the saved entity.
      */
     @PostMapping
-    fun save(@RequestBody dto: DTO): ResponseEntity<DTO>
+    fun save(@Validated @RequestBody dto: DTO): ResponseEntity<DTO>
 
     /**
      * Updates the entity with the specified ID using the provided DTO.
@@ -46,7 +47,7 @@ interface AppController<DTO, ID> {
      * @return A ResponseEntity containing the DTO of the updated entity.
      */
     @PutMapping("/{id}")
-    fun update(@PathVariable("id") id: ID, @RequestBody dto: DTO ): ResponseEntity<DTO>
+    fun update(@PathVariable("id") id: ID, @Validated @RequestBody dto: DTO ): ResponseEntity<DTO>
 
     /**
      * Deletes the entity with the specified ID.
