@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("v1/countries")
-@Tag(name = "Countries", description = "Registered countries.")
+@Tag(name = "Countries", description = "API endpoints for managing registered countries.")
 public class CountryControllerImpl extends CrudController<CountryDto, Country, Integer> implements CountryController {
 
     public CountryControllerImpl(CountryService domainService, CountryDtoMapper mapper) {
