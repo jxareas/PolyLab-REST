@@ -1,9 +1,11 @@
 package com.polylab.doctors.app.dto;
 
 import com.jxareas.jxcore.domain.model.Identifiable;
+import com.polylab.doctors.common.constants.DoctorConstants;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -71,6 +73,7 @@ public class DoctorDto implements Identifiable<Integer> {
     @NotBlank
     private String inssNumber;
 
+    @Size(min = DoctorConstants.MINSA_CODE_REQUIRED_LENGTH, max = DoctorConstants.MINSA_CODE_REQUIRED_LENGTH)
     @NotBlank
     private String minsaCode;
 
@@ -107,6 +110,7 @@ public class DoctorDto implements Identifiable<Integer> {
 
     private String photoUrl;
 
+    @Size(min = DoctorConstants.ACTIVE_FIXED_LENGTH, max = DoctorConstants.ACTIVE_FIXED_LENGTH)
     @NotBlank
     private String active;
 

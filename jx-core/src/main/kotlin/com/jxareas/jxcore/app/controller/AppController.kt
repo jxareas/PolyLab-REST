@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*
  *
  * @param <DTO> The DTO (Data Transfer Object) type representing the data to be exposed by the controller.
  * @param <ID> The identifier type.
+ *
+ * @author Jon Areas
+ * @version 1.0
+ * @since 2022-06-23
  */
 interface AppController<DTO, ID> {
     /**

@@ -35,9 +35,7 @@ abstract class CrudController<DTO : Identifiable<ID>, T, ID : Serializable>(
     override fun getAll(): ResponseEntity<List<DTO>> =
         domainService.getAll()
             .run(mapper::mapAllFrom)
-            .let { responseData ->
-                ResponseEntity.ok(responseData)
-            }
+            .let(ResponseEntityResolver::ok)
 
     /**
      * Retrieves an entity with the given identifier and returns it as a DTO.

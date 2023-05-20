@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CountryDto implements Identifiable<Integer> {
     @Positive
-    @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer countryId;
 

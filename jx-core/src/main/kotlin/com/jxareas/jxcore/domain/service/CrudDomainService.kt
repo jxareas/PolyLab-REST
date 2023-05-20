@@ -31,7 +31,11 @@ abstract class CrudDomainService<T : Any, ID : Any>(private val repository: Defa
      * @return The retrieved entity.
      * @throws ResourceNotFoundException if the entity with the given identifier is not found.
      */
-    override fun getById(id: ID): T = repository.findById(id).orElseThrow { ResourceNotFoundException }
+    override fun getById(id: ID): T =
+        repository.findById(id).orElseThrow {
+            throw ResourceNotFoundException
+        }
+
 
     /**
      * Saves the entity.

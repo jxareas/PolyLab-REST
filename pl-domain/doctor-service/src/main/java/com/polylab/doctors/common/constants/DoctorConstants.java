@@ -23,6 +23,8 @@ public final class DoctorConstants {
     public static final String IDENTIFICATION_NUMBER = "numIdentificacion";
     public static final String INSS_NUMBER = "numINSS";
     public static final String MINSA_CODE = "codMinsa";
+    public static final int MINSA_CODE_REQUIRED_LENGTH = 6;
+    public static final int MINSA_CODE_MAX_LENGTH = 10;
     public static final String FIRST_NAME = "primerNombre";
     public static final String MIDDLE_NAME = "segundoNombre";
     public static final String LAST_NAME = "primerApellido";
@@ -36,5 +38,6 @@ public final class DoctorConstants {
     public static final String CONTRACT_DATE = "fechaContrato";
     public static final String PHOTO_URL = "urlFoto";
     public static final String ACTIVE = "activo";
+    public static final int ACTIVE_FIXED_LENGTH = 1;
     public static final String STATUS = "estado";
 }

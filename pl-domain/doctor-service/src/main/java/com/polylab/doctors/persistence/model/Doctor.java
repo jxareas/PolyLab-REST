@@ -42,67 +42,67 @@ public class Doctor {
     @Column(name = DoctorConstants.DELETION_DATE)
     private LocalDate deletionDate;
 
-    @Column(name = DoctorConstants.RESIDENCE_MUNICIPALITY_ID)
+    @Column(name = DoctorConstants.RESIDENCE_MUNICIPALITY_ID, nullable = false)
     private Integer residenceMunicipalityId;
 
-    @Column(name = DoctorConstants.BIRTH_MUNICIPALITY_ID)
+    @Column(name = DoctorConstants.BIRTH_MUNICIPALITY_ID, nullable = false)
     private Integer birthMunicipalityId;
 
-    @Column(name = DoctorConstants.BIRTH_DEPARTMENT_ID)
+    @Column(name = DoctorConstants.BIRTH_DEPARTMENT_ID, nullable = false)
     private Integer birthDepartmentId;
 
-    @Column(name = DoctorConstants.RESIDENCE_DEPARTMENT_ID)
+    @Column(name = DoctorConstants.RESIDENCE_DEPARTMENT_ID, nullable = false)
     private Integer residenceDepartmentId;
 
-    @Column(name = DoctorConstants.BIRTH_COUNTRY_ID)
+    @Column(name = DoctorConstants.BIRTH_COUNTRY_ID, nullable = false)
     private Integer birthCountryId;
 
-    @Column(name = DoctorConstants.RESIDENCE_COUNTRY_ID)
+    @Column(name = DoctorConstants.RESIDENCE_COUNTRY_ID, nullable = false)
     private Integer residenceCountryId;
 
-    @Column(name = DoctorConstants.IDENTIFICATION_TYPE_ID)
+    @Column(name = DoctorConstants.IDENTIFICATION_TYPE_ID, nullable = false)
     private Integer identificationTypeId;
 
-    @Column(name = DoctorConstants.MARITAL_STATUS_ID)
+    @Column(name = DoctorConstants.MARITAL_STATUS_ID, nullable = false)
     private Integer maritalStatusId;
 
-    @Column(name = DoctorConstants.GENDER_ID)
+    @Column(name = DoctorConstants.GENDER_ID, nullable = false)
     private Integer genderId;
 
-    @Column(name = DoctorConstants.NATIONALITY_ID)
+    @Column(name = DoctorConstants.NATIONALITY_ID, nullable = false)
     private Integer nationalityId;
 
-    @Column(name = DoctorConstants.IDENTIFICATION_NUMBER)
+    @Column(name = DoctorConstants.IDENTIFICATION_NUMBER, nullable = false)
     private String identificationNumber;
 
     @Column(name = DoctorConstants.INSS_NUMBER)
     private String inssNumber;
 
-    @Column(name = DoctorConstants.MINSA_CODE)
+    @Column(name = DoctorConstants.MINSA_CODE, length = DoctorConstants.MINSA_CODE_MAX_LENGTH)
     private String minsaCode;
 
-    @Column(name = DoctorConstants.FIRST_NAME)
+    @Column(name = DoctorConstants.FIRST_NAME, nullable = false)
     private String firstName;
 
     @Column(name = DoctorConstants.MIDDLE_NAME)
     private String middleName;
 
-    @Column(name = DoctorConstants.LAST_NAME)
+    @Column(name = DoctorConstants.LAST_NAME, nullable = false)
     private String lastName;
 
     @Column(name = DoctorConstants.SECOND_LAST_NAME)
     private String secondLastName;
 
-    @Column(name = DoctorConstants.BIRTH_DATE)
+    @Column(name = DoctorConstants.BIRTH_DATE, nullable = false)
     private LocalDate birthDate;
 
-    @Column(name = DoctorConstants.AGE_AT_ENTRY)
+    @Column(name = DoctorConstants.AGE_AT_ENTRY, nullable = false)
     private String ageAtEntry;
 
     @Column(name = DoctorConstants.EMAIL)
     private String email;
 
-    @Column(name = DoctorConstants.HOME_ADDRESS)
+    @Column(name = DoctorConstants.HOME_ADDRESS, nullable = false)
     private String homeAddress;
 
     @Column(name = DoctorConstants.HOME_PHONE)
@@ -117,9 +117,9 @@ public class Doctor {
     @Column(name = DoctorConstants.PHOTO_URL)
     private String photoUrl;
 
-    @Column(name = DoctorConstants.ACTIVE)
+    @Column(name = DoctorConstants.ACTIVE, length = DoctorConstants.ACTIVE_FIXED_LENGTH, nullable = false)
     private String active;
 
-    @Column(name = DoctorConstants.STATUS)
+    @Column(name = DoctorConstants.STATUS, nullable = false)
     private Integer status;
 }
