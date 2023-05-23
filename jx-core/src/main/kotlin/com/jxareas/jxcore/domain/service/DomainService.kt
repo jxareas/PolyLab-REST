@@ -1,6 +1,8 @@
 package com.jxareas.jxcore.domain.service
 
 import com.jxareas.jxcore.core.exception.ModelNotFoundException
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
 
 /**
  * The contract representing a domain service responsible for managing operations on entities.
@@ -16,6 +18,15 @@ interface DomainService<T, ID> {
      * @return A list of all entities.
      */
     fun getAll(): List<T>
+
+    fun getAllPaginated(pageable: Pageable): Page<T>
+
+    /**
+     * Retrieves all ids.
+     *
+     * @return A list of all ids.
+     */
+    fun getAllIds(): List<ID>
 
     /**
      * Retrieves the entity with the specified ID.

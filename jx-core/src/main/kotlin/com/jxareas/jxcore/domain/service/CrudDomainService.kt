@@ -1,7 +1,11 @@
 package com.jxareas.jxcore.domain.service
 
 import com.jxareas.jxcore.core.exception.ModelNotFoundException.ResourceNotFoundException
+import com.jxareas.jxcore.domain.model.ImmutablyIdentifiable
 import com.jxareas.jxcore.persistence.repository.DefaultRepository
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
+import org.springframework.transaction.annotation.Transactional
 
 /**
  * Abstract base class for CRUD domain services.
@@ -14,7 +18,7 @@ import com.jxareas.jxcore.persistence.repository.DefaultRepository
  * @version 1.0
  * @since 2022-06-23
  */
-abstract class CrudDomainService<T : Any, ID : Any>(private val repository: DefaultRepository<T, ID>) :
+abstract class CrudDomainService<T : ImmutablyIdentifiable<ID>, ID : Any>(private val repository: DefaultRepository<T, ID>) :
     DomainService<T, ID> {
 
     /**
@@ -22,7 +26,20 @@ abstract class CrudDomainService<T : Any, ID : Any>(private val repository: Defa
      *
      * @return A list of all entities.
      */
+    @Transactional(readOnly = true)
     override fun getAll(): List<T> = repository.findAll()
+
+    /**
+     * Retrieves all identifiers.
+     *
+     * @return A list of all identifiers.
+     */
+    @Transactional(readOnly = true)
+    override fun getAllIds(): List<ID> = getAll().map { it.identifier }
+
+    @Transactional(readOnly = true)
+    override fun getAllPaginated(pageable: Pageable): Page<T> =
+        repository.findAll(pageable)
 
     /**
      * Retrieves the entity with the specified identifier.

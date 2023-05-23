@@ -1,6 +1,6 @@
 package com.jxareas.jxcore.core.handlers
 
-import com.jxareas.jxcore.core.constants.ExceptionConstants
+import com.jxareas.jxcore.shared.constants.ExceptionConstants
 import com.jxareas.jxcore.core.exception.ErrorResponseDto
 import com.jxareas.jxcore.core.exception.ModelNotFoundException
 import org.springframework.core.Ordered
