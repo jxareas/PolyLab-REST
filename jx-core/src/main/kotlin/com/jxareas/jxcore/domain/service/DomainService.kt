@@ -17,6 +17,15 @@ interface DomainService<T, ID> {
      */
     fun getAll(): List<T>
 
+
+    /**
+     * Retrieves all the ids of the entities in the domain.
+     *
+     * @return A list of all ids.
+     */
+    fun getAllIds(): List<ID>
+
+
     /**
      * Retrieves the entity with the specified ID.
      *

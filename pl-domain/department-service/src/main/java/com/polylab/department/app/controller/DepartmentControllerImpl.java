@@ -1,6 +1,6 @@
 package com.polylab.department.app.controller;
 
-import com.jxareas.jxcore.app.controller.CrudController;
+import com.jxareas.jxcore.app.controller.HypermediaController;
 import com.polylab.department.app.dto.DepartmentDto;
 import com.polylab.department.app.mapper.DepartmentDtoMapper;
 import com.polylab.department.domain.service.DepartmentService;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("v1/departments")
 @Tag(name = "Departments", description = "Registered departments.")
-public class DepartmentControllerImpl extends CrudController<DepartmentDto, Department, Integer> implements DepartmentController {
+public class DepartmentControllerImpl extends HypermediaController<DepartmentDto, Department, Integer> implements DepartmentController {
     public DepartmentControllerImpl(DepartmentService domainService, DepartmentDtoMapper mapper) {
         super(domainService, mapper);
     }

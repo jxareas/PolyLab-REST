@@ -1,6 +1,8 @@
 package com.jxareas.jxcore.domain.service
 
 import com.jxareas.jxcore.core.exception.ModelNotFoundException.ResourceNotFoundException
+import com.jxareas.jxcore.domain.model.Identifiable
+import com.jxareas.jxcore.domain.model.WithId
 import com.jxareas.jxcore.persistence.repository.DefaultRepository
 
 /**
@@ -14,7 +16,7 @@ import com.jxareas.jxcore.persistence.repository.DefaultRepository
  * @version 1.0
  * @since 2022-06-23
  */
-abstract class CrudDomainService<T : Any, ID : Any>(private val repository: DefaultRepository<T, ID>) :
+abstract class CrudDomainService<T : WithId<ID>, ID : Any>(private val repository: DefaultRepository<T, ID>) :
     DomainService<T, ID> {
 
     /**
@@ -23,6 +25,9 @@ abstract class CrudDomainService<T : Any, ID : Any>(private val repository: Defa
      * @return A list of all entities.
      */
     override fun getAll(): List<T> = repository.findAll()
+
+
+    override fun getAllIds(): List<ID> = getAll().map { it.identifier }
 
     /**
      * Retrieves the entity with the specified identifier.

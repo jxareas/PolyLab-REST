@@ -1,5 +1,7 @@
 package com.jxareas.jxcore.app.controller
 
+import org.springframework.hateoas.CollectionModel
+import org.springframework.hateoas.EntityModel
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
@@ -15,14 +17,18 @@ import org.springframework.web.bind.annotation.*
  * @version 1.0
  * @since 2022-06-23
  */
-interface AppController<DTO, ID> {
+interface ApplicationController<DTO, ID> {
     /**
      * Retrieves all entities.
      *
      * @return A ResponseEntity containing a list of DTOs.
      */
+    @GetMapping("/links")
+    fun getAllAsCollection(): ResponseEntity<CollectionModel<EntityModel<DTO>>>
+
     @GetMapping
-    fun getAll(): ResponseEntity<List<DTO>>
+    fun getAll() : ResponseEntity<List<DTO>>
+
 
 
     /**
@@ -32,7 +38,7 @@ interface AppController<DTO, ID> {
      * @return A ResponseEntity containing the DTO of the retrieved entity.
      */
     @GetMapping("/{id}")
-    fun getById(@PathVariable("id") id: ID): ResponseEntity<DTO>
+    fun getById(@PathVariable("id") id: ID):  ResponseEntity<EntityModel<DTO>>
 
     /**
      * Saves a new entity.
@@ -41,7 +47,7 @@ interface AppController<DTO, ID> {
      * @return A ResponseEntity containing the DTO of the saved entity.
      */
     @PostMapping
-    fun save(@Validated @RequestBody dto: DTO): ResponseEntity<DTO>
+    fun save(@Validated @RequestBody dto: DTO): ResponseEntity<EntityModel<DTO>>
 
     /**
      * Updates the entity with the specified ID using the provided DTO.
@@ -51,7 +57,7 @@ interface AppController<DTO, ID> {
      * @return A ResponseEntity containing the DTO of the updated entity.
      */
     @PutMapping("/{id}")
-    fun update(@PathVariable("id") id: ID, @Validated @RequestBody dto: DTO ): ResponseEntity<DTO>
+    fun update(@PathVariable("id") id: ID, @Validated @RequestBody dto: DTO ): ResponseEntity<EntityModel<DTO>>
 
     /**
      * Deletes the entity with the specified ID.

@@ -1,5 +1,6 @@
 package com.jxareas.jxcore.persistence.repository
 
+import com.jxareas.jxcore.domain.model.WithId
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.NoRepositoryBean
 
@@ -10,6 +11,8 @@ import org.springframework.data.repository.NoRepositoryBean
  * @param <ID> The identifier type.
  */
 @NoRepositoryBean
-interface DefaultRepository<T : Any, ID : Any> : JpaRepository<T, ID>
+interface DefaultRepository<T : WithId<ID>, ID : Any> : JpaRepository<T, ID> {
+
+}
 
 

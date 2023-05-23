@@ -1,7 +1,7 @@
 package com.polylab.exams.app.controller;
 
-import com.jxareas.jxcore.app.controller.AppController;
+import com.jxareas.jxcore.app.controller.ApplicationController;
 import com.polylab.exams.app.dto.ExamDto;
 
-public interface ExamController extends AppController<ExamDto, Integer> {
+public interface ExamController extends ApplicationController<ExamDto, Integer> {
 }

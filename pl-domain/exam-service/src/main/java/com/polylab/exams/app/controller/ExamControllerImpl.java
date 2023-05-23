@@ -1,6 +1,6 @@
 package com.polylab.exams.app.controller;
 
-import com.jxareas.jxcore.app.controller.CrudController;
+import com.jxareas.jxcore.app.controller.HypermediaController;
 import com.polylab.exams.app.dto.ExamDto;
 import com.polylab.exams.app.mapper.ExamDtoMapper;
 import com.polylab.exams.domain.service.ExamService;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("v1/exams")
 @Tag(name = "Exams", description = "Registered exams.")
-public class ExamControllerImpl extends CrudController<ExamDto, Exam, Integer> implements ExamController {
+public class ExamControllerImpl extends HypermediaController<ExamDto, Exam, Integer> implements ExamController {
 
     public ExamControllerImpl(ExamService domainService, ExamDtoMapper mapper) {
         super(domainService, mapper);

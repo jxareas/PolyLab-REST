@@ -1,7 +1,7 @@
 package com.polylab.doctors.app.controller;
 
-import com.jxareas.jxcore.app.controller.AppController;
+import com.jxareas.jxcore.app.controller.ApplicationController;
 import com.polylab.doctors.app.dto.DoctorDto;
 
-public interface DoctorController extends AppController<DoctorDto, Integer> {
+public interface DoctorController extends ApplicationController<DoctorDto, Integer> {
 }
