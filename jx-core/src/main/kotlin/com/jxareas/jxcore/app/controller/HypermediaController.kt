@@ -3,23 +3,18 @@ package com.jxareas.jxcore.app.controller
 import com.jxareas.jxcore.core.helpers.ResponseEntityResolver
 import com.jxareas.jxcore.core.helpers.UriResourceProvider
 import com.jxareas.jxcore.core.mapper.TwoWayMapper
-import com.jxareas.jxcore.domain.helper.PredicateBuilder
 import com.jxareas.jxcore.domain.model.Identifiable
 import com.jxareas.jxcore.domain.service.DomainService
 import com.jxareas.jxcore.shared.extensions.withNextAndPreviousLink
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
-import org.springframework.data.jpa.domain.Specification
 import org.springframework.hateoas.CollectionModel
 import org.springframework.hateoas.EntityModel
 import org.springframework.hateoas.config.EnableHypermediaSupport
 import org.springframework.hateoas.config.EnableHypermediaSupport.HypermediaType
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
 import java.io.Serializable
 
 
@@ -27,7 +22,7 @@ import java.io.Serializable
 abstract class HypermediaController<DTO : Identifiable<ID>, T, ID : Serializable>(
     private val domainService: DomainService<T, ID>,
     private val mapper: TwoWayMapper<DTO, T>,
-) : HypermediaControls<DTO, ID> {
+) : HateoasController<DTO, ID> {
     override fun getAll(): ResponseEntity<CollectionModel<EntityModel<DTO>>> {
         val entities = domainService.getAll()
         val dtoList = mapper.mapAllFrom(entities)

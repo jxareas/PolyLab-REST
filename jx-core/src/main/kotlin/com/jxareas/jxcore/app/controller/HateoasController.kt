@@ -6,9 +6,8 @@ import org.springframework.hateoas.EntityModel
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
-import java.awt.print.Pageable
 
-interface HypermediaControls<DTO, ID> {
+interface HateoasController<DTO, ID> {
 
     @GetMapping
     fun getAll(): ResponseEntity<CollectionModel<EntityModel<DTO>>>

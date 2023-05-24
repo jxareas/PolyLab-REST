@@ -85,7 +85,7 @@ object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() 
     override fun handleMethodArgumentNotValid(
         ex: MethodArgumentNotValidException,
         headers: HttpHeaders,
-        status: HttpStatusCode,
+        status: HttpStatus,
         request: WebRequest,
     ): ResponseEntity<Any> {
         val errors: MutableMap<String, String?> = HashMap()
@@ -114,7 +114,7 @@ object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() 
         ex: java.lang.Exception,
         body: Any?,
         headers: HttpHeaders,
-        statusCode: HttpStatusCode,
+        status: HttpStatus,
         request: WebRequest,
     ): ResponseEntity<Any> {
         val servletWebRequest = request as ServletWebRequest
@@ -122,6 +122,6 @@ object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() 
             message = ExceptionConstants.DEFAULT_ERROR_MESSAGE,
             path = servletWebRequest.request.requestURI,
         )
-        return ResponseEntity(errorResponse, headers, statusCode)
+        return ResponseEntity.status(status).headers(headers).body(errorResponse)
     }
 }

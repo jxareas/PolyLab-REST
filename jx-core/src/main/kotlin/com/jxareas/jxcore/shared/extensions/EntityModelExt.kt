@@ -1,10 +1,6 @@
 package com.jxareas.jxcore.shared.extensions
 
-import com.jxareas.jxcore.app.controller.HypermediaControls
-import jakarta.persistence.criteria.CriteriaBuilder
-import jakarta.persistence.criteria.CriteriaQuery
-import jakarta.persistence.criteria.Predicate
-import jakarta.persistence.criteria.Root
+import com.jxareas.jxcore.app.controller.HateoasController
 import org.springframework.hateoas.EntityModel
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 
@@ -17,7 +13,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
  *
  * @see EntityModel
  */
-fun <DTO, ID> HypermediaControls<DTO, ID>.withNextAndPreviousLink(id: ID, entityModel : EntityModel<DTO>, fetchAllIds: () -> List<ID>) {
+fun <DTO, ID> HateoasController<DTO, ID>.withNextAndPreviousLink(id: ID, entityModel : EntityModel<DTO>, fetchAllIds: () -> List<ID>) {
     val allIds = fetchAllIds.invoke()
 
     val currentIndex = allIds.indexOf(id)
