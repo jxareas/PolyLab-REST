@@ -3,7 +3,7 @@ package com.jxareas.jxcore.app.controller
 import com.jxareas.jxcore.core.helpers.ResponseEntityResolver
 import com.jxareas.jxcore.core.helpers.UriResourceProvider
 import com.jxareas.jxcore.core.mapper.TwoWayMapper
-import com.jxareas.jxcore.domain.model.Identifiable
+import com.jxareas.jxcore.domain.model.MutableIdentifiable
 import com.jxareas.jxcore.domain.service.DomainService
 import org.springframework.http.ResponseEntity
 import java.io.Serializable
@@ -23,7 +23,7 @@ import java.io.Serializable
  * @version 1.0
  * @since 2022-06-23
  */
-abstract class CrudController<DTO : Identifiable<ID>, T, ID : Serializable>(
+abstract class CrudController<DTO : MutableIdentifiable<ID>, T, ID : Serializable>(
     private val domainService: DomainService<T, ID>,
     private val mapper: TwoWayMapper<DTO, T>,
 ) : AppController<DTO, ID> {

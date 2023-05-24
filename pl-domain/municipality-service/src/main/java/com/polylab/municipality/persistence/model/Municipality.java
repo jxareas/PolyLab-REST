@@ -1,5 +1,6 @@
 package com.polylab.municipality.persistence.model;
 
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.municipality.common.constants.MunicipalityConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Municipality {
+public class Municipality implements Identifiable<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +32,8 @@ public class Municipality {
     @Column(name = MunicipalityConstants.STATUS_FIELD, nullable = false)
     private Integer status;
 
+    @Override
+    public Integer getIdentifier() {
+        return municipalityId;
+    }
 }

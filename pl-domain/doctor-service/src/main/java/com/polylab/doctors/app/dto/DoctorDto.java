@@ -1,6 +1,6 @@
 package com.polylab.doctors.app.dto;
 
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.doctors.common.constants.DoctorConstants;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorDto implements Identifiable<Integer> {
+public class DoctorDto implements MutableIdentifiable<Integer> {
 
     @Positive
     @NotNull

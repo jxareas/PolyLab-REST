@@ -1,5 +1,6 @@
 package com.polylab.department.persistence.model;
 
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.department.common.constants.DepartmentConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Department {
+public class Department implements Identifiable<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,4 +31,9 @@ public class Department {
 
     @Column(name = DepartmentConstants.STATUS_FIELD, nullable = false)
     private Integer status;
+
+    @Override
+    public Integer getIdentifier() {
+        return departmentId;
+    }
 }

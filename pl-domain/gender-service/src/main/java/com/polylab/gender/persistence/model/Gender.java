@@ -1,5 +1,6 @@
 package com.polylab.gender.persistence.model;
 
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.gender.common.constants.GenderConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Gender {
+public class Gender implements Identifiable<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = GenderConstants.GENDER_ID_FIELD, unique = true, nullable = false)
@@ -24,4 +25,8 @@ public class Gender {
         nullable = false)
     private String description;
 
+    @Override
+    public Integer getIdentifier() {
+        return genderId;
+    }
 }

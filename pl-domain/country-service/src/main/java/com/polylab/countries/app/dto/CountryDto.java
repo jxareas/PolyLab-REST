@@ -2,7 +2,7 @@ package com.polylab.countries.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.countries.common.constants.CountryConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CountryDto implements Identifiable<Integer> {
+public class CountryDto implements MutableIdentifiable<Integer> {
     @Positive
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer countryId;

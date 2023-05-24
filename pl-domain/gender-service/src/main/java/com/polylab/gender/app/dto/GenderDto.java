@@ -1,7 +1,7 @@
 package com.polylab.gender.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.gender.common.constants.GenderConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GenderDto implements Identifiable<Integer> {
+public class GenderDto implements MutableIdentifiable<Integer> {
 
     @Positive
     @NotNull

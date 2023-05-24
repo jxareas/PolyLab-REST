@@ -1,5 +1,6 @@
 package com.polylab.exams.persistence.model;
 
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.exams.common.constants.ExamConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Exam {
+public class Exam implements Identifiable<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,4 +60,8 @@ public class Exam {
     @Column(name = ExamConstants.STATUS_FIELD, nullable = false)
     private Integer status;
 
+    @Override
+    public Integer getIdentifier() {
+        return examId;
+    }
 }

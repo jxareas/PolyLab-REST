@@ -1,5 +1,6 @@
 package com.polylab.doctors.persistence.model;
 
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.doctors.common.constants.DoctorConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -15,7 +16,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Doctor {
+public class Doctor implements Identifiable<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DoctorConstants.EMPLOYEE_ID, unique = true, nullable = false)
@@ -122,4 +123,9 @@ public class Doctor {
 
     @Column(name = DoctorConstants.STATUS, nullable = false)
     private Integer status;
+
+    @Override
+    public Integer getIdentifier() {
+        return employeeId;
+    }
 }

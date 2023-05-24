@@ -1,7 +1,7 @@
 package com.polylab.municipality.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.municipality.common.constants.MunicipalityConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MunicipalityDto implements Identifiable<Integer> {
+public class MunicipalityDto implements MutableIdentifiable<Integer> {
 
     @Positive
     @NotNull

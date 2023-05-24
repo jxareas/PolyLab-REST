@@ -1,5 +1,7 @@
 package com.jxareas.jxcore.persistence.repository
 
+import com.jxareas.jxcore.domain.model.Identifiable
+import com.jxareas.jxcore.domain.model.MutableIdentifiable
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.NoRepositoryBean
 
@@ -10,6 +12,6 @@ import org.springframework.data.repository.NoRepositoryBean
  * @param <ID> The identifier type.
  */
 @NoRepositoryBean
-interface DefaultRepository<T : Any, ID : Any> : JpaRepository<T, ID>
+interface DefaultRepository<T : Identifiable<ID>, ID : Any> : JpaRepository<T, ID>
 
 

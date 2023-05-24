@@ -1,7 +1,7 @@
 package com.polylab.department.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.department.common.constants.DepartmentConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DepartmentDto implements Identifiable<Integer> {
+public class DepartmentDto implements MutableIdentifiable<Integer> {
     @Positive
     @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
