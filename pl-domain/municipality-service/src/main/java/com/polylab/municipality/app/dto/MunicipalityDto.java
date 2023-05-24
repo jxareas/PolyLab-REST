@@ -33,12 +33,12 @@ public class MunicipalityDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return municipalityId;
     }
 
     @Override
-    public void setIdentifier(Integer identifier) {
+    public void setId(Integer identifier) {
         municipalityId = identifier;
     }
 }

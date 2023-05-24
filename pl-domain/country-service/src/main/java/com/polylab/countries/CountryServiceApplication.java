@@ -1,12 +1,11 @@
 package com.polylab.countries;
 
-import com.jxareas.jxcore.core.handlers.DefaultResponseEntityExceptionHandler;
+import com.jxareas.jxcore.common.annotations.EnableJxCore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 
+@EnableJxCore
 @SpringBootApplication
-@Import(DefaultResponseEntityExceptionHandler.class)
 public class CountryServiceApplication {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.jxareas.jxcore.core.exception
+package com.jxareas.jxcore.common.exception
 
 /**
  * Exception class representing a model not found error.

@@ -26,12 +26,12 @@ public class GenderDto implements MutableIdentifiable<Integer> {
     private String description;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return genderId;
     }
 
     @Override
-    public void setIdentifier(Integer identifier) {
+    public void setId(Integer identifier) {
         genderId = identifier;
     }
 }

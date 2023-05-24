@@ -1,4 +1,4 @@
-package com.jxareas.jxcore.core.helpers
+package com.jxareas.jxcore.common.helpers
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

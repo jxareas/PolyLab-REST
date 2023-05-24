@@ -1,13 +1,13 @@
 package com.jxareas.jxcore.domain.model
 
 /**
- * A contract representing an immutable and uniquely identifiable entity.
+ * A contract representing a uniquely, immutably identifiable entity.
  *
  * @param ID The type of the identifier.
  */
 interface Identifiable<ID> {
     /**
-     * The identifier of the entity.
+     * The immutable identifier of the entity.
      */
-    val identifier: ID
+    val id: ID
 }

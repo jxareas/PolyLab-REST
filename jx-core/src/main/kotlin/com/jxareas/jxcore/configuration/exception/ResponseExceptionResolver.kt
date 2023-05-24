@@ -1,10 +1,9 @@
-package com.jxareas.jxcore.core.handlers
+package com.jxareas.jxcore.configuration.exception
 
-import com.jxareas.jxcore.core.constants.ExceptionConstants
-import com.jxareas.jxcore.core.exception.ErrorResponseDto
-import com.jxareas.jxcore.core.exception.ModelNotFoundException
-import org.springframework.core.Ordered
-import org.springframework.core.annotation.Order
+import com.jxareas.jxcore.utils.constants.ExceptionConstants
+import com.jxareas.jxcore.app.dto.ErrorResponseDto
+import com.jxareas.jxcore.common.annotations.ExceptionResolver
+import com.jxareas.jxcore.common.exception.ModelNotFoundException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
@@ -13,23 +12,20 @@ import org.springframework.validation.FieldError
 import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestControllerAdvice
 import org.springframework.web.context.request.ServletWebRequest
 import org.springframework.web.context.request.WebRequest
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
-import java.time.LocalDateTime
 
 /**
  * Global exception handler that handles and processes exceptions in the application.
  * It extends the ResponseEntityExceptionHandler, which is a convenient base class for creating exception handlers in Spring MVC.
  *
  * @author Jon Areas
- * @version 1.0
+ * @version 1.1
  * @since 2022-04-11
  */
-@Order(Ordered.HIGHEST_PRECEDENCE)
-@RestControllerAdvice
-object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() {
+@ExceptionResolver
+object ResponseExceptionResolver : ResponseEntityExceptionHandler() {
 
     /**
      * Exception handler for handling general exceptions.
@@ -43,9 +39,8 @@ object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     fun handleExceptions(exception: Exception, request: WebRequest): ResponseEntity<ErrorResponseDto> {
         val errorResponse = ErrorResponseDto(
-            LocalDateTime.now(),
             exception.message ?: ExceptionConstants.DEFAULT_ERROR_MESSAGE,
-            request.getDescription(false),
+            request,
         )
         return ResponseEntity.internalServerError().body(errorResponse)
     }
@@ -64,10 +59,7 @@ object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() 
         exception: ModelNotFoundException,
         request: WebRequest,
     ): ResponseEntity<ErrorResponseDto> {
-        val errorResponse = ErrorResponseDto(
-            LocalDateTime.now(),
-            exception.message, request.getDescription(false),
-        )
+        val errorResponse = ErrorResponseDto(exception.message, request)
         return ResponseEntity(errorResponse, HttpStatus.NOT_FOUND)
     }
 
@@ -95,7 +87,7 @@ object DefaultResponseEntityExceptionHandler : ResponseEntityExceptionHandler() 
                 val message = error.defaultMessage
                 errors[fieldName] = message
             }
-        val errorResponse = ErrorResponseDto(LocalDateTime.now(), errors.toString(), request.getDescription(false))
+        val errorResponse = ErrorResponseDto(errors.toString(), request)
         return ResponseEntity.badRequest().body(errorResponse)
     }
 

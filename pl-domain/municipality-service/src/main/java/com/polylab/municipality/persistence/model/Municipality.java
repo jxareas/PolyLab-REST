@@ -33,7 +33,7 @@ public class Municipality implements Identifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return municipalityId;
     }
 }

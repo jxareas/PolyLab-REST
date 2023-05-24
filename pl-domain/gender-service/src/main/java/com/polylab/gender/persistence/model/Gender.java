@@ -26,7 +26,7 @@ public class Gender implements Identifiable<Integer> {
     private String description;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return genderId;
     }
 }

@@ -32,12 +32,12 @@ public class DepartmentDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return departmentId;
     }
 
     @Override
-    public void setIdentifier(Integer identifier) {
+    public void setId(Integer identifier) {
         departmentId = identifier;
     }
 }

@@ -29,12 +29,12 @@ public class CountryDto implements MutableIdentifiable<Integer> {
 
     @Override
     @JsonIgnore
-    public Integer getIdentifier() {
+    public Integer getId() {
         return countryId;
     }
 
     @Override
-    public void setIdentifier(Integer identifier) {
+    public void setId(Integer identifier) {
         countryId = identifier;
     }
 }

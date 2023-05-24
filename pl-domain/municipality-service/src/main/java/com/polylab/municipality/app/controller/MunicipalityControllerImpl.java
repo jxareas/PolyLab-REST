@@ -1,6 +1,6 @@
 package com.polylab.municipality.app.controller;
 
-import com.jxareas.jxcore.app.controller.CrudController;
+import com.jxareas.jxcore.app.controller.AppController;
 import com.polylab.municipality.app.dto.MunicipalityDto;
 import com.polylab.municipality.app.mapper.MunicipalityDtoMapper;
 import com.polylab.municipality.domain.service.MunicipalityService;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("v1/municipalities")
 @Tag(name = "Municipalities", description = "Registered municipalities.")
-public class MunicipalityControllerImpl extends CrudController<MunicipalityDto, Municipality, Integer> implements MunicipalityController {
+public class MunicipalityControllerImpl extends AppController<MunicipalityDto, Municipality, Integer> implements MunicipalityController {
     public MunicipalityControllerImpl(MunicipalityService domainService, MunicipalityDtoMapper mapper) {
         super(domainService, mapper);
     }

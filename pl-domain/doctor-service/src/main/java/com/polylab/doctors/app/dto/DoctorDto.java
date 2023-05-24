@@ -118,12 +118,12 @@ public class DoctorDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return doctorId;
     }
 
     @Override
-    public void setIdentifier(Integer identifier) {
+    public void setId(Integer identifier) {
         doctorId = identifier;
     }
 }

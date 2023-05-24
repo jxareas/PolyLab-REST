@@ -74,12 +74,12 @@ public class ExamDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return examId;
     }
 
     @Override
-    public void setIdentifier(Integer identifier) {
+    public void setId(Integer identifier) {
         this.examId = identifier;
     }
 }

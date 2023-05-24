@@ -110,7 +110,7 @@ public class Patient implements Identifiable<Integer> {
     private Integer status;
 
     @Override
-    public Integer getIdentifier() {
+    public Integer getId() {
         return patientId;
     }
 }

@@ -1,4 +1,4 @@
-package com.jxareas.jxcore.core.mapper;
+package com.jxareas.jxcore.common.mapper;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import java.util.List;
  * @param <D> The destination type.
  *
  * @author Jon Areas
- * @version 1.0
- * @since 2022-06-23
+ * @version 1.2
+ * @since 2022-06-11
  */
 public interface OneWayMapper<S, D> {
     /**
