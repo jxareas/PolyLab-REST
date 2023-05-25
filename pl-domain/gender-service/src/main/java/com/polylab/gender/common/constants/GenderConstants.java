@@ -1,12 +1,15 @@
 package com.polylab.gender.common.constants;
 
-public final class GenderConstants {
-    public static final String TABLE_NAME = "tbl_cat_Sexo";
-    public static final String GENDER_ID_FIELD = "IdSexo";
+import lombok.experimental.UtilityClass;
 
-    public static final String DESCRIPTION_FIELD = "Descripcion";
+@UtilityClass
+public class GenderConstants {
+    public final String TABLE_NAME = "tbl_cat_Sexo";
+    public final String GENDER_ID_FIELD = "IdSexo";
 
-    public static final int DESCRIPTION_MIN_LENGTH = 3;
+    public final String DESCRIPTION_FIELD = "Descripcion";
 
-    public static final int DESCRIPTION_MAX_LENGTH = 10;
+    public final int DESCRIPTION_MIN_LENGTH = 3;
+
+    public final int DESCRIPTION_MAX_LENGTH = 10;
 }

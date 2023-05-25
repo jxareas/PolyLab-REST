@@ -1,0 +1,11 @@
+= Religion
+
+== DDL
+
+[source, sql]
+CREATE TABLE `tblCatReligion`
+(
+    `idReligion`  int AUTO_INCREMENT NOT NULL,
+    `descripcion` varchar(45)        NOT NULL,
+    PRIMARY KEY (`idReligion`)
+)

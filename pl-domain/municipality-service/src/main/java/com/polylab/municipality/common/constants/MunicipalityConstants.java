@@ -1,14 +1,17 @@
 package com.polylab.municipality.common.constants;
 
-public final class MunicipalityConstants {
-    public static final String TABLE_NAME = "tbl_cat_Municipio";
-    public static final String MUNICIPALITY_ID_FIELD = "IdMunicipio";
-    public static final String DEPARTMENT_ID_FIELD = "IdDepartamento";
+import lombok.experimental.UtilityClass;
 
-    public static final String DESCRIPTION_FIELD = "Descripcion";
-    public static final String STATUS_FIELD = "Estado";
+@UtilityClass
+public class MunicipalityConstants {
+    public final String TABLE_NAME = "tbl_cat_Municipio";
+    public final String MUNICIPALITY_ID_FIELD = "IdMunicipio";
+    public final String DEPARTMENT_ID_FIELD = "IdDepartamento";
 
-    public static final int DESCRIPTION_MIN_LENGTH = 4;
+    public final String DESCRIPTION_FIELD = "Descripcion";
+    public final String STATUS_FIELD = "Estado";
 
-    public static final int DESCRIPTION_MAX_LENGTH = 50;
+    public final int DESCRIPTION_MIN_LENGTH = 4;
+
+    public final int DESCRIPTION_MAX_LENGTH = 50;
 }

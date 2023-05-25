@@ -7,6 +7,6 @@ import com.polylab.municipality.app.mapper.MunicipalityDtoMapper
 import com.polylab.municipality.domain.service.MunicipalityService
 import com.polylab.municipality.persistence.model.Municipality
 
-@ApiController(path = ["v1/municipalities"], tagName = "Municipalities", tagDescription = "Endpoints for managing municipalities.",)
+@ApiController("v1/municipalities", tagName = "Municipalities", tagDescription = "Endpoints for managing municipalities.",)
 class MunicipalityController(service: MunicipalityService, mapper: MunicipalityDtoMapper) :
     AppController<MunicipalityDto, Municipality, Int>(service, mapper)

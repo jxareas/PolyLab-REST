@@ -1,9 +1,9 @@
 package com.jxareas.jxcore.configuration.exception
 
-import com.jxareas.jxcore.utils.constants.ExceptionConstants
-import com.jxareas.jxcore.app.dto.ErrorResponseDto
 import com.jxareas.jxcore.annotations.ExceptionResolver
+import com.jxareas.jxcore.app.dto.ErrorResponseDto
 import com.jxareas.jxcore.common.exception.ModelNotFoundException
+import com.jxareas.jxcore.utils.constants.ExceptionConstants
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
@@ -23,6 +23,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  * @author Jon Areas
  * @version 1.1
  * @since 2022-04-11
+ *
+ * @see ResponseEntityExceptionHandler
+ * @see ExceptionResolver
  */
 @ExceptionResolver
 object ResponseExceptionResolver : ResponseEntityExceptionHandler() {

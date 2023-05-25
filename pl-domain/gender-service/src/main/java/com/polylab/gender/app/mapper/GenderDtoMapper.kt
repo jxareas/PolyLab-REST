@@ -1,7 +1,7 @@
 package com.polylab.gender.app.mapper
 
 import com.jxareas.jxcore.annotations.Mapper
-import com.jxareas.jxcore.common.mapper.TwoWayMapper
+import com.jxareas.jxcore.domain.mapper.TwoWayMapper
 import com.polylab.gender.app.dto.GenderDto
 import com.polylab.gender.persistence.model.Gender
 import org.modelmapper.ModelMapper

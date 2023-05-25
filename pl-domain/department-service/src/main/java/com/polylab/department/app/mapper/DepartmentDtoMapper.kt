@@ -1,7 +1,7 @@
 package com.polylab.department.app.mapper
 
 import com.jxareas.jxcore.annotations.Mapper
-import com.jxareas.jxcore.common.mapper.TwoWayMapper
+import com.jxareas.jxcore.domain.mapper.TwoWayMapper
 import com.polylab.department.app.dto.DepartmentDto
 import com.polylab.department.persistence.model.Department
 import org.modelmapper.ModelMapper

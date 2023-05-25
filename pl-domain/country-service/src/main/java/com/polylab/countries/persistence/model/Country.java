@@ -17,7 +17,7 @@ import lombok.Setter;
 public class Country implements Identifiable<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = CountryConstants.COUNTRY_ID_FIELD, unique = true, nullable = false)
+    @Column(name = CountryConstants.COUNTRY_ID, unique = true, nullable = false)
     private Integer countryId;
 
     @Column(name = CountryConstants.DESCRIPTION_FIELD,

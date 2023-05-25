@@ -11,7 +11,7 @@
     <artifactId>exam-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>exam-service</name>
-    <description>exam-service</description>
+    <description>Exam Service</description>
     <properties>
         <java.version>17</java.version>
     </properties>

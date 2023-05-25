@@ -1,6 +1,9 @@
 package com.polylab.patients.common.constants;
 
-public final class PatientConstants {
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public class PatientConstants {
     public static final String TABLE_NAME = "tbl_Paciente";
 
     public static final String PATIENT_ID_FIELD = "IdPaciente";
@@ -53,7 +56,6 @@ public final class PatientConstants {
     public static final String DECEASED = "Fallecido";
 
     public static final String STATUS = "Estado";
-
 
 
 }

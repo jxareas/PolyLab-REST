@@ -22,7 +22,7 @@ public class Patient implements Identifiable<Integer> {
     @Column(name = PatientConstants.PATIENT_ID_FIELD, unique = true, nullable = false)
     private Integer patientId;
 
-    @Column(name = PatientConstants.IDENTIFICATION_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.IDENTIFICATION_ID_FIELD, nullable = false)
     private Integer identificationId;
 
     @Column(name = PatientConstants.IDENTIFICATION_NUMBER_FIELD, nullable = false)
@@ -34,43 +34,43 @@ public class Patient implements Identifiable<Integer> {
     @Column(name = PatientConstants.INSS_NUMBER_FIELD, nullable = false)
     private String inssNumber;
 
-    @Column(name = PatientConstants.MARITAL_STATUS_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.MARITAL_STATUS_ID_FIELD, nullable = false)
     private Integer maritalStatusId;
 
     @Column(name = PatientConstants.EMAIL_FIELD)
     private String email;
 
-    @Column(name = PatientConstants.GENDER_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.GENDER_ID_FIELD, nullable = false)
     private Integer genderId;
 
-    @Column(name = PatientConstants.NATIONALITY_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.NATIONALITY_ID_FIELD, nullable = false)
     private Integer nationalityId;
 
-    @Column(name = PatientConstants.COUNTRY_BORN_IN_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.COUNTRY_BORN_IN_ID_FIELD, nullable = false)
     private Integer countryBornInId;
 
-    @Column(name = PatientConstants.DEPARTMENT_BORN_IN_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.DEPARTMENT_BORN_IN_ID_FIELD, nullable = false)
     private Integer departmentBornInId;
 
-    @Column(name = PatientConstants.MUNICIPALITY_BORN_IN_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.MUNICIPALITY_BORN_IN_ID_FIELD, nullable = false)
     private Integer municipalityBornInId;
 
-    @Column(name = PatientConstants.COUNTRY_RESIDENCE_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.COUNTRY_RESIDENCE_ID_FIELD, nullable = false)
     private Integer countryResidenceId;
 
-    @Column(name = PatientConstants.DEPARTMENT_RESIDENCE_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.DEPARTMENT_RESIDENCE_ID_FIELD, nullable = false)
     private Integer departmentResidenceId;
 
-    @Column(name = PatientConstants.MUNICIPALITY_RESIDENCE_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.MUNICIPALITY_RESIDENCE_ID_FIELD, nullable = false)
     private Integer municipalityResidenceId;
 
-    @Column(name = PatientConstants.BLOOD_TYPE_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.BLOOD_TYPE_ID_FIELD, nullable = false)
     private Integer bloodTypeId;
 
-    @Column(name = PatientConstants.PROFESSION_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.PROFESSION_ID_FIELD, nullable = false)
     private Integer professionId;
 
-    @Column(name = PatientConstants.RELIGION_ID_FIELD, nullable = false, unique = true)
+    @Column(name = PatientConstants.RELIGION_ID_FIELD, nullable = false)
     private Integer religionId;
 
     @Column(name = PatientConstants.FIRST_NAME, length = PatientConstants.FIRST_NAME_MAX_LENGTH, nullable = false)

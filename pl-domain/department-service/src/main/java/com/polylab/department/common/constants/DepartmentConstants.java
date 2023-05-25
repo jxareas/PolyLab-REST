@@ -1,17 +1,20 @@
 package com.polylab.department.common.constants;
 
-public final class DepartmentConstants {
+import lombok.experimental.UtilityClass;
 
-    public static final String TABLE_NAME = "tbl_cat_Departamento";
-    public static final String DEPARTMENT_ID_FIELD = "IdDepartamento";
-    public static final String COUNTRY_ID_FIELD = "IdPais";
+@UtilityClass
+public class DepartmentConstants {
 
-    public static final String DESCRIPTION_FIELD = "Descripcion";
-    public static final String STATUS_FIELD = "Estado";
+    public final String TABLE_NAME = "tbl_cat_Departamento";
+    public final String DEPARTMENT_ID_FIELD = "IdDepartamento";
+    public final String COUNTRY_ID_FIELD = "IdPais";
 
-    public static final int DESCRIPTION_MIN_LENGTH = 3;
+    public final String DESCRIPTION_FIELD = "Descripcion";
+    public final String STATUS_FIELD = "Estado";
 
-    public static final int DESCRIPTION_MAX_LENGTH = 50;
+    public final int DESCRIPTION_MIN_LENGTH = 3;
+
+    public final int DESCRIPTION_MAX_LENGTH = 50;
 
 
 }

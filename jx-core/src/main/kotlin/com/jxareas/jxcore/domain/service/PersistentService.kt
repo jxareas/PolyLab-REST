@@ -4,7 +4,7 @@ import com.jxareas.jxcore.common.exception.ModelNotFoundException.ResourceNotFou
 import com.jxareas.jxcore.utils.extensions.ifPresentOrThrow
 import com.jxareas.jxcore.utils.extensions.orElseThrow
 import com.jxareas.jxcore.domain.model.Identifiable
-import com.jxareas.jxcore.persistence.repository.DefaultRepository
+import com.jxareas.jxcore.repository.DefaultRepository
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import java.io.Serializable

@@ -1,6 +1,6 @@
 package com.polylab.doctors.persistence.repository
 
-import com.jxareas.jxcore.persistence.repository.DefaultRepository
+import com.jxareas.jxcore.repository.IntKeyedRepository
 import com.polylab.doctors.persistence.model.Doctor
 
-interface DoctorRepository : DefaultRepository<Doctor, Int>
+interface DoctorRepository : IntKeyedRepository<Doctor>

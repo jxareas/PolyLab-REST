@@ -1,6 +1,6 @@
 package com.polylab.gender.persistence.repository
 
-import com.jxareas.jxcore.persistence.repository.DefaultRepository
+import com.jxareas.jxcore.repository.IntKeyedRepository
 import com.polylab.gender.persistence.model.Gender
 
-interface GenderRepository : DefaultRepository<Gender, Int>
+interface GenderRepository : IntKeyedRepository<Gender>

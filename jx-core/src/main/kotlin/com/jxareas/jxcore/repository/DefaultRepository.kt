@@ -1,4 +1,4 @@
-package com.jxareas.jxcore.persistence.repository
+package com.jxareas.jxcore.repository
 
 import com.jxareas.jxcore.domain.model.Identifiable
 import com.jxareas.jxcore.domain.model.MutableIdentifiable

@@ -1,4 +1,4 @@
-package com.jxareas.jxcore.common.mapper;
+package com.jxareas.jxcore.domain.mapper;
 
 import java.util.List;
 

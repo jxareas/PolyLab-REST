@@ -19,6 +19,7 @@ USE `LIS`;
 
 --
 -- FIXME: RELIGION
+-- TODO: READY
 -- Table structure for table `tblCatReligion`
 --
 
@@ -83,7 +84,8 @@ LOCK TABLES `tbl_AreaServLabEmpleados` WRITE;
 UNLOCK TABLES;
 
 --
--- FIXME: DOCTORES
+-- FIXME: DOCTORS
+-- TODO: READY
 -- Table structure for table `tbl_Empleado`
 --
 
@@ -167,7 +169,8 @@ LOCK TABLES `tbl_Empleado` WRITE;
 UNLOCK TABLES;
 
 --
--- FIXME: EXAMEN
+-- FIXME: EXAM
+-- TODO: WIP
 -- Table structure for table `tbl_Examenes`
 --
 
@@ -307,7 +310,8 @@ LOCK TABLES `tbl_OrdenesDetalle` WRITE;
 UNLOCK TABLES;
 
 --
--- FIXME: PACIENTE
+-- FIXME: PATIENT
+-- TODO: READY
 -- Table structure for table `tbl_Paciente`
 --
 
@@ -1043,6 +1047,7 @@ LOCK TABLES `tbl_cat_Perfiles` WRITE;
 UNLOCK TABLES;
 
 --
+-- FIXME: EXAM PROFILE
 -- Table structure for table `tbl_cat_PerfilesExamenes`
 --
 
@@ -1076,7 +1081,7 @@ LOCK TABLES `tbl_cat_PerfilesExamenes` WRITE;
 UNLOCK TABLES;
 
 --
--- FIXME: PROFESION
+-- FIXME: PROFESSION
 -- Table structure for table `tbl_cat_Profesiones`
 --
 
@@ -1387,7 +1392,7 @@ LOCK TABLES `tbl_cat_UnidadMedidas` WRITE;
 UNLOCK TABLES;
 
 --
--- FIXME: NORMALES
+-- FIXME: NORMAL VALUES
 -- Valores Normales de Examen
 -- Table structure for table `tbl_cat_ValoresNormales`
 --

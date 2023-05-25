@@ -3,7 +3,7 @@ package com.jxareas.jxcore.app.controller
 import com.jxareas.jxcore.app.extensions.withNextAndPreviousLink
 import com.jxareas.jxcore.common.helpers.ResponseEntityResolver
 import com.jxareas.jxcore.common.helpers.UriResourceProvider
-import com.jxareas.jxcore.common.mapper.TwoWayMapper
+import com.jxareas.jxcore.domain.mapper.TwoWayMapper
 import com.jxareas.jxcore.domain.model.MutableIdentifiable
 import com.jxareas.jxcore.domain.service.DomainService
 import org.springframework.data.domain.Page

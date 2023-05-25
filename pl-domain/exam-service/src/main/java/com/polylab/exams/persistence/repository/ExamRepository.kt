@@ -1,6 +1,6 @@
 package com.polylab.exams.persistence.repository
 
-import com.jxareas.jxcore.persistence.repository.DefaultRepository
+import com.jxareas.jxcore.repository.IntKeyedRepository
 import com.polylab.exams.persistence.model.Exam
 
-interface ExamRepository : DefaultRepository<Exam, Int>
+interface ExamRepository : IntKeyedRepository<Exam>

@@ -1,0 +1,26 @@
+= Exam Profiles
+
+== DDL
+
+[source, sql]
+CREATE TABLE `tbl_cat_Perfiles`
+(
+    `IdPerfiles`  int AUTO_INCREMENT                                            NOT NULL,
+    `Descripcion` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `Estado`      int                                                           NOT NULL,
+    PRIMARY KEY (`IdPerfiles`)
+)
+---------------------------------------------------------------------
+CREATE TABLE `tbl_cat_PerfilesExamenes`
+(
+    `IdPerfilesExamenes` int NOT NULL,
+    `IdExamen`           int NOT NULL,
+    `IdPerfiles`         int NOT NULL,
+    PRIMARY KEY (`IdPerfilesExamenes`),
+    KEY `Reftbl_Examenes771` (`IdExamen`),
+    KEY `Reftbl_cat_Perfiles481` (`IdPerfiles`),
+    CONSTRAINT `Reftbl_cat_Perfiles481` FOREIGN KEY (`IdPerfiles`) REFERENCES `tbl_cat_Perfiles` (`IdPerfiles`),
+    CONSTRAINT `Reftbl_Examenes771` FOREIGN KEY (`IdExamen`) REFERENCES `tbl_Examenes` (`IdExamen`)
+)
+
+

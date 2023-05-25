@@ -20,12 +20,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
  * }
  * ```
  *
- * @see org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
- * @see org.springframework.web.bind.annotation.RestControllerAdvice
- *
  * @since 2022-04-13
  * @version 1.1
  * @author Jon Areas
+ *
+ * @see org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
+ * @see org.springframework.web.bind.annotation.RestControllerAdvice
+ * @see org.springframework.core.annotation.Order
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)

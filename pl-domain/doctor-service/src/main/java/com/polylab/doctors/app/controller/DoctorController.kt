@@ -7,6 +7,6 @@ import com.polylab.doctors.app.mapper.DoctorDtoMapper
 import com.polylab.doctors.domain.service.DoctorService
 import com.polylab.doctors.persistence.model.Doctor
 
-@ApiController(path = ["v1/doctors"], tagName = "Doctors", tagDescription = "Endpoints for managing personal.")
+@ApiController("v1/doctors", tagName = "Doctors", tagDescription = "Endpoints for managing personal.")
 class DoctorController(service: DoctorService, mapper: DoctorDtoMapper) :
     AppController<DoctorDto, Doctor, Int>(service, mapper)

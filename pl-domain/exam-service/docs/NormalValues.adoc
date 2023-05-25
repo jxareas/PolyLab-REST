@@ -1,0 +1,18 @@
+= Normal Values
+
+== DDL
+[source, sql]
+CREATE TABLE `tbl_cat_ValoresNormales`
+(
+    `IdValoresNormales` int AUTO_INCREMENT NOT NULL,
+    `IdExamen`          int                NOT NULL,
+    `IdSexo`            int                NOT NULL,
+    `RangoAlto`         double             NOT NULL,
+    `RangoBajo`         double             NOT NULL,
+    `Estado`            int                NOT NULL,
+    PRIMARY KEY (`IdValoresNormales`),
+    KEY `Reftbl_cat_Sexo711` (`IdSexo`),
+    KEY `Reftbl_Examenes701` (`IdExamen`),
+    CONSTRAINT `Reftbl_cat_Sexo711` FOREIGN KEY (`IdSexo`) REFERENCES `tbl_cat_Sexo` (`IdSexo`),
+    CONSTRAINT `Reftbl_Examenes701` FOREIGN KEY (`IdExamen`) REFERENCES `tbl_Examenes` (`IdExamen`)
+)
