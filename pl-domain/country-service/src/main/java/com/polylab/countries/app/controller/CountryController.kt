@@ -1,7 +1,7 @@
 package com.polylab.countries.app.controller
 
 import com.jxareas.jxcore.app.controller.AppController
-import com.jxareas.jxcore.common.annotations.ApiController
+import com.jxareas.jxcore.annotations.ApiController
 import com.polylab.countries.app.dto.CountryDto
 import com.polylab.countries.app.mapper.CountryDtoMapper
 import com.polylab.countries.domain.service.CountryService

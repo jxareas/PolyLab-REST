@@ -30,7 +30,7 @@
 This project contains the maintenance module of a laboratory information management system that can be used by multiple
 users, following minimalist concepts of tactical DDD.
 
-It is built using Spring Boot and Netflix Eureka for service discovery and registration.
+It is built using Spring Boot and Netflix Eureka for service discovery and registration, as well as both the Java & Kotlin programming language.
 
 Note that a laboratory information system (LIS) is a series of computer programs that process, store and manage data
 from all stages of medical processes and biochemical assays. Doctors and laboratory technicians use laboratory

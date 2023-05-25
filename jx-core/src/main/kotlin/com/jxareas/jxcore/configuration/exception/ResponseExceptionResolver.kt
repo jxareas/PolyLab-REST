@@ -2,7 +2,7 @@ package com.jxareas.jxcore.configuration.exception
 
 import com.jxareas.jxcore.utils.constants.ExceptionConstants
 import com.jxareas.jxcore.app.dto.ErrorResponseDto
-import com.jxareas.jxcore.common.annotations.ExceptionResolver
+import com.jxareas.jxcore.annotations.ExceptionResolver
 import com.jxareas.jxcore.common.exception.ModelNotFoundException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus

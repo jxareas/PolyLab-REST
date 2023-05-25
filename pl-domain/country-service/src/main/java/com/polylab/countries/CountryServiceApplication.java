@@ -1,6 +1,6 @@
 package com.polylab.countries;
 
-import com.jxareas.jxcore.common.annotations.EnableJxCore;
+import com.jxareas.jxcore.annotations.EnableJxCore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
