@@ -29,7 +29,7 @@ public class Patient implements Identifiable<Integer> {
     private String identificationNumber;
 
     @Column(name = PatientConstants.FILE_NUMBER_FIELD, nullable = false)
-    private String fileNumber;
+    private Integer fileNumber;
 
     @Column(name = PatientConstants.INSS_NUMBER_FIELD, nullable = false)
     private String inssNumber;
@@ -97,14 +97,14 @@ public class Patient implements Identifiable<Integer> {
     @Column(name = PatientConstants.MOBILE_PHONE)
     private String mobilePhone;
 
-    @Column(name = PatientConstants.ACTIVE, nullable = false)
-    private Boolean active;
+    @Column(name = PatientConstants.ACTIVE, length = PatientConstants.ACTIVE_FIXED_LENGTH, nullable = false)
+    private String active;
 
     @Column(name = PatientConstants.PREGNANT)
-    private Boolean pregnant;
+    private String pregnant;
 
     @Column(name = PatientConstants.DECEASED)
-    private Boolean deceased;
+    private String deceased;
 
     @Column(name = PatientConstants.STATUS, nullable = false)
     private Integer status;

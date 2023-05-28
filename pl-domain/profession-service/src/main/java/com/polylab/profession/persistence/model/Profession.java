@@ -18,7 +18,7 @@ public class Profession implements Identifiable<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = ProfessionConstants.TABLE_NAME, unique = true, nullable = false)
+    @Column(name = ProfessionConstants.PROFESSION_ID, unique = true, nullable = false)
     private Integer professionId;
 
     @Column(name = ProfessionConstants.DESCRIPTION_FIELD,

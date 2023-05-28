@@ -1,4 +1,4 @@
-package com.polylab.countries
+package com.polylab.religion;
 
 import com.jxareas.jxcore.annotations.EnableJxCore
 import com.jxareas.jxcore.annotations.EnableNonRestrictiveCorsPolicy
@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @EnableJxCore
 @EnableNonRestrictiveCorsPolicy
 @SpringBootApplication
-open class CountryServiceApplication
+open class ReligionServiceApplication
 
-fun main(vararg args : String) = CountryServiceApplication::class.with(*args)
-
-
+fun main(vararg args : String) = ReligionServiceApplication::class.with(*args)

@@ -52,6 +52,7 @@ public class PatientConstants {
     public static final String HOME_PHONE = "TelefonoDomiciliar";
     public static final String MOBILE_PHONE = "TelefonoMovil";
     public static final String ACTIVE = "Activo";
+    public static final int ACTIVE_FIXED_LENGTH = 1;
     public static final String PREGNANT = "Emabrazada";
     public static final String DECEASED = "Fallecido";
 

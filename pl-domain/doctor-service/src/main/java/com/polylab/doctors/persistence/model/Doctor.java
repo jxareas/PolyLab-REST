@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = DoctorConstants.TABLE_NAME)
@@ -34,14 +35,14 @@ public class Doctor implements Identifiable<Integer> {
     @Column(name = DoctorConstants.MODIFICATION_USER_ID)
     private Integer modificationUserId;
 
-    @Column(name = DoctorConstants.CREATION_DATE)
-    private LocalDate creationDate;
+    @Column(name = DoctorConstants.CREATION_DATE, columnDefinition = "DATE")
+    private LocalDateTime creationDate;
 
-    @Column(name = DoctorConstants.MODIFICATION_DATE)
-    private LocalDate modificationDate;
+    @Column(name = DoctorConstants.MODIFICATION_DATE, columnDefinition = "DATE")
+    private LocalDateTime modificationDate;
 
-    @Column(name = DoctorConstants.DELETION_DATE)
-    private LocalDate deletionDate;
+    @Column(name = DoctorConstants.DELETION_DATE, columnDefinition = "DATE")
+    private LocalDateTime deletionDate;
 
     @Column(name = DoctorConstants.RESIDENCE_MUNICIPALITY_ID, nullable = false)
     private Integer residenceMunicipalityId;

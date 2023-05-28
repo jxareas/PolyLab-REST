@@ -2,7 +2,7 @@ package com.polylab.department
 
 import com.jxareas.jxcore.annotations.EnableJxCore
 import com.jxareas.jxcore.annotations.EnableNonRestrictiveCorsPolicy
-import org.springframework.boot.SpringApplication
+import com.jxareas.jxcore.utils.extensions.runApp
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @EnableJxCore
@@ -10,6 +10,4 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @SpringBootApplication
 open class DepartmentServiceApplication
 
-fun main(args: Array<String>) {
-    SpringApplication.run(DepartmentServiceApplication::class.java, *args)
-}
+fun main(vararg args : String) = runApp(DepartmentServiceApplication::class, *args)

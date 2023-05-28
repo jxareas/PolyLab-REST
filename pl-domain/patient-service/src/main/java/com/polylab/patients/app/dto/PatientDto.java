@@ -2,9 +2,11 @@ package com.polylab.patients.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jxareas.jxcore.domain.model.MutableIdentifiable;
+import com.polylab.patients.common.constants.PatientConstants;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,8 +29,8 @@ public class PatientDto implements MutableIdentifiable<Integer> {
     @NotBlank
     private String identificationNumber;
 
-    @NotBlank
-    private String fileNumber;
+    @NotNull
+    private Integer fileNumber;
 
     private String inssNumber;
 
@@ -102,11 +104,12 @@ public class PatientDto implements MutableIdentifiable<Integer> {
 
     private String mobilePhone;
 
-    private Boolean active;
+    @Size(min = PatientConstants.ACTIVE_FIXED_LENGTH, max = PatientConstants.ACTIVE_FIXED_LENGTH)
+    private String active;
 
-    private Boolean pregnant;
+    private String pregnant;
 
-    private Boolean deceased;
+    private String deceased;
 
     private Integer status;
 
