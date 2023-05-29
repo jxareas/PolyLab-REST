@@ -1,5 +1,6 @@
 package com.polylab.department.app.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.department.common.constants.DepartmentConstants;
@@ -15,8 +16,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DepartmentDto implements MutableIdentifiable<Integer> {
+
     @Positive
-    @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer departmentId;
 
@@ -32,6 +33,7 @@ public class DepartmentDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
+    @JsonIgnore
     public Integer getId() {
         return departmentId;
     }

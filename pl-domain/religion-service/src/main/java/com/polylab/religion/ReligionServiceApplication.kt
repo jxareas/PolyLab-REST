@@ -2,7 +2,7 @@ package com.polylab.religion;
 
 import com.jxareas.jxcore.annotations.EnableJxCore
 import com.jxareas.jxcore.annotations.EnableNonRestrictiveCorsPolicy
-import com.jxareas.jxcore.utils.extensions.with
+import com.jxareas.jxcore.common.extensions.with
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @EnableJxCore

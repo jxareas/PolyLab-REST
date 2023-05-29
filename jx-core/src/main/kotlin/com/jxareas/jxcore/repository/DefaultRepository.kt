@@ -1,7 +1,6 @@
 package com.jxareas.jxcore.repository
 
 import com.jxareas.jxcore.domain.model.Identifiable
-import com.jxareas.jxcore.domain.model.MutableIdentifiable
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor
 import org.springframework.data.repository.NoRepositoryBean

@@ -22,7 +22,7 @@ It provides abstractions for controllers, services, and mappers, allowing develo
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Documentation](#documentation)
-- [Usage](#usage)
+- [Top Components](#Components)
 - [Components](#components)
 - [LICENSE](#license)
 
@@ -52,8 +52,7 @@ For detailed usage examples and API documentation, please refer to the documenta
 
 ## Components
 
-## Usage
-JxCore provides a set of interfaces, base abstract classes, helpers and annotations that can be extended and implemented to build custom functionality. Here's a brief overview of some key components:
+JxCore provides a set of interfaces, base abstract classes, helpers and annotations that can be extended and implemented to build custom functionality. Here's a brief overview of some of their key components:
 
 ### Base Abstract Classes
 
@@ -64,7 +63,7 @@ JxCore provides a set of interfaces, base abstract classes, helpers and annotati
 ### Interfaces
 - `HypermediaController<DTO, ID>`: An interface that defines methods for retrieving entities with hypermedia links, retrieving an entity by its ID, saving a new entity, updating an existing entity, and deleting an entity by its ID.
 
-- `TwoWayMapper<DTO, T>`: A mapper interface used for bidirectional mapping between DTOs (Data Transfer Objects) and domain entities. It allows transforming DTOs to entities and vice versa, facilitating data transfer and persistence operations.
+- `MirrorMapper<S, D>`: A mapper interface used for bidirectional mapping between DTOs (Data Transfer Objects) and domain entities. It allows transforming DTOs to entities and vice versa, facilitating data transfer and persistence operations.
 
 - `DomainService<T, ID>`: An interface that defines methods for interacting with the persistence layer. It includes methods for retrieving entities, retrieving identifiers, paging entities, saving entities, updating entities, and deleting entities.
 
@@ -81,7 +80,6 @@ JxCore provides several annotations that can be used to configure and enhance yo
 - `ResponseEntityResolver`: Contains static methods for creating instances of the ResponseEntity class, which represents the HTTP response to be sent back to the client.
 
 - `UriResourceProvider`: A namespace over `ServletUriComponentsBuilder` for constructing URIs based on different patterns and variable values.
-
 
 
 ### LICENSE

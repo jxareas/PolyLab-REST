@@ -1,5 +1,6 @@
 package com.jxareas.jxcore.configuration.mapper
 
+import com.jxareas.jxcore.domain.mapper.ModelMapperProvider
 import org.modelmapper.ModelMapper
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -18,6 +19,6 @@ class MapperConfiguration {
      */
     @Primary
     @Bean
-    fun modelMapper(): ModelMapper = ModelMapper()
+    fun modelMapper(): ModelMapper = ModelMapperProvider.INSTANCE
 }
 

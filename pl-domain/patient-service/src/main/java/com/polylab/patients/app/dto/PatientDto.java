@@ -1,5 +1,6 @@
 package com.polylab.patients.app.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.patients.common.constants.PatientConstants;
@@ -18,7 +19,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PatientDto implements MutableIdentifiable<Integer> {
     @Positive
-    @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer patientId;
 
@@ -114,6 +114,7 @@ public class PatientDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
+    @JsonIgnore
     public Integer getId() {
         return patientId;
     }

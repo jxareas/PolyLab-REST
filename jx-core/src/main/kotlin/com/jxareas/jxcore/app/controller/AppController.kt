@@ -3,7 +3,7 @@ package com.jxareas.jxcore.app.controller
 import com.jxareas.jxcore.app.extensions.withNextAndPreviousLink
 import com.jxareas.jxcore.common.helpers.ResponseEntityResolver
 import com.jxareas.jxcore.common.helpers.UriResourceProvider
-import com.jxareas.jxcore.domain.mapper.TwoWayMapper
+import com.jxareas.jxcore.domain.mapper.MirrorMapper
 import com.jxareas.jxcore.domain.model.MutableIdentifiable
 import com.jxareas.jxcore.domain.service.DomainService
 import org.springframework.data.domain.Page
@@ -39,7 +39,7 @@ import java.io.Serializable
  */
 abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serializable>(
     private val domainService: DomainService<T, ID>,
-    private val mapper: TwoWayMapper<DTO, T>,
+    private val mapper: MirrorMapper<DTO, T>,
 ) : HypermediaController<DTO, ID>, ReadOnlyController<DTO, ID> {
     override fun getAllWithLinks(): ResponseEntity<CollectionModel<EntityModel<DTO>>> {
         val entities = domainService.getAll()

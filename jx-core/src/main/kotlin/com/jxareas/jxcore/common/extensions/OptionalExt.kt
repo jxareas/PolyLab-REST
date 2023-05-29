@@ -1,11 +1,11 @@
-package com.jxareas.jxcore.utils.extensions
+package com.jxareas.jxcore.common.extensions
 
-import java.util.*
+import java.util.Optional
 
 /**
  * Type alias for a function that supplies a Throwable.
  */
-internal typealias ExceptionSupplier = () -> Throwable
+private typealias ExceptionSupplier = () -> Throwable
 
 /**
  * Replaces the value if present or throws an exception.

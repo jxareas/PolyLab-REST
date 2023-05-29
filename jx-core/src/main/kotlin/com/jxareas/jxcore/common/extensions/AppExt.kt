@@ -1,4 +1,4 @@
-package com.jxareas.jxcore.utils.extensions
+package com.jxareas.jxcore.common.extensions
 
 import org.springframework.boot.SpringApplication
 import kotlin.reflect.KClass

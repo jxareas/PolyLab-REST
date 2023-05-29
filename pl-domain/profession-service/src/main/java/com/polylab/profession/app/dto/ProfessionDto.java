@@ -1,5 +1,6 @@
 package com.polylab.profession.app.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.profession.common.constants.ProfessionConstants;
@@ -28,6 +29,7 @@ public class ProfessionDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
+    @JsonIgnore
     public Integer getId() {
         return professionId;
     }

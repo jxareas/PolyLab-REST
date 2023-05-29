@@ -42,7 +42,6 @@ import org.springframework.web.bind.annotation.RestController
  * @since 2022-04-16
  * @version 1.1
  * @author Jon Areas
- *
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)

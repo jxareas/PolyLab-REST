@@ -1,5 +1,6 @@
 package com.polylab.municipality.app.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.municipality.common.constants.MunicipalityConstants;
@@ -17,13 +18,12 @@ import lombok.NoArgsConstructor;
 public class MunicipalityDto implements MutableIdentifiable<Integer> {
 
     @Positive
-    @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer municipalityId;
 
     @Positive
     @NotNull
-    private Integer countryId;
+    private Integer departmentId;
 
     @NotEmpty
     @Size(min = MunicipalityConstants.DESCRIPTION_MIN_LENGTH, max = MunicipalityConstants.DESCRIPTION_MAX_LENGTH)
@@ -33,6 +33,7 @@ public class MunicipalityDto implements MutableIdentifiable<Integer> {
     private Integer status;
 
     @Override
+    @JsonIgnore
     public Integer getId() {
         return municipalityId;
     }

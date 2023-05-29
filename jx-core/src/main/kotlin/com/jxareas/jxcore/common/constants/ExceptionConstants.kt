@@ -1,9 +1,9 @@
-package com.jxareas.jxcore.utils.constants
+package com.jxareas.jxcore.common.constants
 
 /**
  * Constants related to exceptions.
  */
-object ExceptionConstants {
+internal object ExceptionConstants {
     /**
      * The default error message for unexpected errors.
      */

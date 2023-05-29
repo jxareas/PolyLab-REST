@@ -1,10 +1,10 @@
 package com.polylab.gender.app.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jxareas.jxcore.domain.model.MutableIdentifiable;
 import com.polylab.gender.common.constants.GenderConstants;
 import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 public class GenderDto implements MutableIdentifiable<Integer> {
 
     @Positive
-    @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer genderId;
 
@@ -26,6 +25,7 @@ public class GenderDto implements MutableIdentifiable<Integer> {
     private String description;
 
     @Override
+    @JsonIgnore
     public Integer getId() {
         return genderId;
     }

@@ -1,8 +1,8 @@
 package com.jxareas.jxcore.domain.service
 
 import com.jxareas.jxcore.common.exception.ModelNotFoundException.ResourceNotFoundException
-import com.jxareas.jxcore.utils.extensions.ifPresentOrThrow
-import com.jxareas.jxcore.utils.extensions.orElseThrow
+import com.jxareas.jxcore.common.extensions.ifPresentOrThrow
+import com.jxareas.jxcore.common.extensions.orElseThrow
 import com.jxareas.jxcore.domain.model.Identifiable
 import com.jxareas.jxcore.repository.DefaultRepository
 import org.springframework.data.domain.Page
