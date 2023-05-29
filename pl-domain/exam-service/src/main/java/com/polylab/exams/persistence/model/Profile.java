@@ -1,5 +1,6 @@
 package com.polylab.exams.persistence.model;
 
+import com.jxareas.jxcore.domain.model.Identifiable;
 import com.polylab.exams.common.constants.ProfileConstants;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,7 +19,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Profile {
+public class Profile implements Identifiable<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = ProfileConstants.PROFILE_ID, unique = true, nullable = false)
@@ -30,4 +31,9 @@ public class Profile {
 
     @Column(name = ProfileConstants.STATUS, nullable = false)
     private Integer status;
+
+    @Override
+    public Integer getId() {
+        return profileId;
+    }
 }
