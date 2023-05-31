@@ -1,6 +1,6 @@
 package com.polylab.doctors.domain.service
 
-import com.jxareas.jxelerate.domain.service.DomainService
+import com.jxareas.jxelerator.domain.service.DomainService
 import com.polylab.doctors.persistence.model.Doctor
 
 interface DoctorService : DomainService<Doctor, Int>

@@ -2,7 +2,7 @@ package com.polylab.patients.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxelerate.domain.model.MutableIdentifiable;
+import com.jxareas.jxelerator.domain.model.MutableIdentifiable;
 import com.polylab.patients.common.constants.PatientConstants;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

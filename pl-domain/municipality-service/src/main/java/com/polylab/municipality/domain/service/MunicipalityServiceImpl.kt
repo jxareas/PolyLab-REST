@@ -1,10 +1,10 @@
 package com.polylab.municipality.domain.service
 
-import com.jxareas.jxelerate.domain.service.PersistentService
+import com.jxareas.jxelerator.domain.service.PersistentService
 import com.polylab.municipality.persistence.model.Municipality
 import com.polylab.municipality.persistence.repository.MunicipalityRepository
 import org.springframework.stereotype.Service
 
 @Service
 class MunicipalityServiceImpl(repository: MunicipalityRepository) :
-    PersistentService<Municipality, Int>(repository), MunicipalityService
+    MunicipalityService, PersistentService<Municipality, Int>(repository)

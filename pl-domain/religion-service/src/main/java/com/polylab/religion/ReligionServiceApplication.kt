@@ -1,11 +1,11 @@
 package com.polylab.religion;
 
-import com.jxareas.jxcore.annotations.EnableJxCore
-import com.jxareas.jxcore.annotations.EnableNonRestrictiveCorsPolicy
-import com.jxareas.jxcore.common.extensions.with
+import com.jxareas.jxelerator.annotations.EnableJxelerator
+import com.jxareas.jxelerator.annotations.EnableNonRestrictiveCorsPolicy
+import com.jxareas.jxelerator.extensions.with
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
-@EnableJxCore
+@EnableJxelerator
 @EnableNonRestrictiveCorsPolicy
 @SpringBootApplication
 open class ReligionServiceApplication

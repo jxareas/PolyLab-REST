@@ -1,10 +1,10 @@
 package com.polylab.doctors.domain.service
 
-import com.jxareas.jxelerate.domain.service.PersistentService
+import com.jxareas.jxelerator.domain.service.PersistentService
 import com.polylab.doctors.persistence.model.Doctor
 import com.polylab.doctors.persistence.repository.DoctorRepository
 import org.springframework.stereotype.Service
 
 @Service
 class DoctorServiceImpl(repository: DoctorRepository) :
-    PersistentService<Doctor, Int>(repository), DoctorService
+    DoctorService, PersistentService<Doctor, Int>(repository)

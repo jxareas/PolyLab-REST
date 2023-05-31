@@ -1,12 +1,12 @@
 package com.polylab.doctors;
 
-import com.jxareas.jxelerate.annotations.EnableJxelerate
-import com.jxareas.jxelerate.annotations.EnableNonRestrictiveCorsPolicy
-import com.jxareas.jxelerate.common.extensions.runApp
+import com.jxareas.jxelerator.annotations.EnableJxelerator
+import com.jxareas.jxelerator.annotations.EnableNonRestrictiveCorsPolicy
+import com.jxareas.jxelerator.extensions.runApp
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @EnableNonRestrictiveCorsPolicy
-@EnableJxelerate
+@EnableJxelerator
 @SpringBootApplication
 open class DoctorServiceApplication
 
