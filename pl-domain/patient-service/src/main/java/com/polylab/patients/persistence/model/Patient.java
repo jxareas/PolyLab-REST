@@ -1,6 +1,6 @@
 package com.polylab.patients.persistence.model;
 
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxelerate.domain.model.Identifiable;
 import com.polylab.patients.common.constants.PatientConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

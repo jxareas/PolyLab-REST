@@ -2,7 +2,7 @@ package com.polylab.profession.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.MutableIdentifiable;
+import com.jxareas.jxelerate.domain.model.MutableIdentifiable;
 import com.polylab.profession.common.constants.ProfessionConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

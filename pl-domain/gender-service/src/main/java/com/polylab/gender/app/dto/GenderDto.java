@@ -2,7 +2,7 @@ package com.polylab.gender.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.MutableIdentifiable;
+import com.jxareas.jxelerate.domain.model.MutableIdentifiable;
 import com.polylab.gender.common.constants.GenderConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;

@@ -1,7 +1,7 @@
 package com.polylab.department.app.controller
 
-import com.jxareas.jxcore.annotations.ApiController
-import com.jxareas.jxcore.app.controller.AppController
+import com.jxareas.jxelerate.annotations.ApiController
+import com.jxareas.jxelerate.app.controller.AppController
 import com.polylab.department.app.dto.DepartmentDto
 import com.polylab.department.app.mapper.DepartmentDtoMapper
 import com.polylab.department.domain.service.DepartmentService

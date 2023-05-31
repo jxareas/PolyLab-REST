@@ -1,7 +1,7 @@
 package com.polylab.patients.app.controller
 
-import com.jxareas.jxcore.annotations.ApiController
-import com.jxareas.jxcore.app.controller.AppController
+import com.jxareas.jxelerate.annotations.ApiController
+import com.jxareas.jxelerate.app.controller.AppController
 import com.polylab.patients.app.dto.PatientDto
 import com.polylab.patients.app.mapper.PatientDtoMapper
 import com.polylab.patients.domain.service.PatientService

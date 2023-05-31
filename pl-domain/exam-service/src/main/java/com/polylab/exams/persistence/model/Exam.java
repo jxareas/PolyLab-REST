@@ -1,6 +1,6 @@
 package com.polylab.exams.persistence.model;
 
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxelerate.domain.model.Identifiable;
 import com.polylab.exams.common.constants.ExamConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

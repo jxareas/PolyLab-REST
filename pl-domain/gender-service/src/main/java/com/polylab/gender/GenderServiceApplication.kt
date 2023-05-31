@@ -1,11 +1,11 @@
 package com.polylab.gender;
 
-import com.jxareas.jxcore.annotations.EnableJxCore
-import com.jxareas.jxcore.annotations.EnableNonRestrictiveCorsPolicy
-import com.jxareas.jxcore.common.extensions.runApp
+import com.jxareas.jxelerate.annotations.EnableJxelerate
+import com.jxareas.jxelerate.annotations.EnableNonRestrictiveCorsPolicy
+import com.jxareas.jxelerate.common.extensions.runApp
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
-@EnableJxCore
+@EnableJxelerate
 @EnableNonRestrictiveCorsPolicy
 @SpringBootApplication
 open class GenderServiceApplication

@@ -1,6 +1,6 @@
 package com.polylab.municipality.persistence.model;
 
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxelerate.domain.model.Identifiable;
 import com.polylab.municipality.common.constants.MunicipalityConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

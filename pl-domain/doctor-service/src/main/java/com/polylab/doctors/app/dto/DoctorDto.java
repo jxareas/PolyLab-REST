@@ -2,7 +2,7 @@ package com.polylab.doctors.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxcore.domain.model.MutableIdentifiable;
+import com.jxareas.jxelerate.domain.model.MutableIdentifiable;
 import com.polylab.doctors.common.constants.DoctorConstants;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

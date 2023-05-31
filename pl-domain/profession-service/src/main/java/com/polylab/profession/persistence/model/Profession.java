@@ -1,6 +1,6 @@
 package com.polylab.profession.persistence.model;
 
-import com.jxareas.jxcore.domain.model.Identifiable;
+import com.jxareas.jxelerate.domain.model.Identifiable;
 import com.polylab.profession.common.constants.ProfessionConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
