@@ -1,6 +1,6 @@
 package com.jxareas.jxelerate.app.extensions
 
-import com.jxareas.jxelerate.app.controller.HypermediaController
+import com.jxareas.jxelerate.app.controller.LinkableController
 import org.springframework.hateoas.EntityModel
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 
@@ -12,12 +12,12 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
  * @version 1.3
  * @param id The identifier of the current entity.
  * @param fetchIdentifiers A function that fetches a list of all entity identifiers.
- * @receiver A controller which implements the [HypermediaController] contract.
+ * @receiver A controller that handles hypermedia link generation.
  * @see EntityModel
- * @see HypermediaController
+ * @see LinkableController
  * @since 1.3
  */
-internal fun <DTO, ID> HypermediaController<DTO, ID>.withNextAndPreviousLink(
+internal fun <DTO, ID> LinkableController<DTO, ID>.withNextAndPreviousLink(
     id: ID,
     entityModel: EntityModel<DTO>,
     fetchIdentifiers: () -> List<ID>,

@@ -1,10 +1,10 @@
 package com.polylab.profession.app.mapper
 
-import com.jxareas.jxcore.annotations.Mapper
-import com.jxareas.jxcore.domain.mapper.MirrorMapper
-import com.jxareas.jxcore.common.extensions.mirroring
+import com.jxareas.jxelerate.annotations.Mapper
+import com.jxareas.jxelerate.common.extensions.mirrorMap
+import com.jxareas.jxelerate.domain.mapper.MirrorMapper
 import com.polylab.profession.app.dto.ProfessionDto
 import com.polylab.profession.persistence.model.Profession
 
 @Mapper
-object ProfessionDtoMapper : MirrorMapper<ProfessionDto, Profession> by mirroring()
+object ProfessionDtoMapper : MirrorMapper<ProfessionDto, Profession> by mirrorMap()

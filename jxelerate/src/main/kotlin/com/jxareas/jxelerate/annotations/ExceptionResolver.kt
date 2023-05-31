@@ -27,4 +27,5 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 @Retention(AnnotationRetention.RUNTIME)
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @RestControllerAdvice
+@MustBeDocumented
 internal annotation class ExceptionResolver

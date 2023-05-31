@@ -1,48 +1,57 @@
 package com.jxareas.jxelerate.app.controller
 
+import com.jxareas.jxelerate.common.helpers.ResponseEntityProvider
+import com.jxareas.jxelerate.domain.mapper.MirrorMapper
+import com.jxareas.jxelerate.domain.model.MutableIdentifiable
+import com.jxareas.jxelerate.domain.service.DomainService
 import org.springframework.data.domain.Page
+import org.springframework.data.domain.PageRequest
+import org.springframework.data.domain.Sort
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestParam
+import java.io.Serializable
 
 /**
- * An interface that provides read-only operations for the retrieval of entities.
- * Implementations of this interface can retrieve all entities or retrieve entities in a paginated manner.
+ * Abstract base class for read-only controllers in a REST API.
  *
  * @author Jon Areas
  * @version 1.3
- * @param DTO The DTO (Data Transfer Object) type representing the entity.
- * @param ID The type of the entity's identifier.
- * @see Page
- * @see ResponseEntity
+ * @param DTO The DTO type for the controller.
+ * @param T The entity type for the controller.
+ * @param ID The ID type for the entity.
+ * @property domainService The domain service used for retrieving data.
+ * @property mapper The mapper used for mapping entities to DTOs.
+ * @see ReadableController
  * @since 1.0
- * @inheritdoc
  */
-interface ReadOnlyController<DTO, ID> {
+abstract class ReadOnlyController<DTO, T : Any, ID : Serializable>(
+    private val domainService: DomainService<T, ID>,
+    private val mapper: MirrorMapper<DTO, T>,
+) : ReadableController<DTO, ID> {
+    companion object {
+        /**
+         * Factory method for creating instances of [ReadOnlyController].
+         *
+         * @param domainService The domain service used for retrieving data.
+         * @param mapper The mapper used for mapping entities to DTOs.
+         * @return An instance of [ReadOnlyController].
+         */
+        internal fun <DTO : MutableIdentifiable<ID>, T : Any, ID : Serializable> factory(
+            domainService: DomainService<T, ID>,
+            mapper: MirrorMapper<DTO, T>,
+        ): ReadOnlyController<DTO, T, ID> = object : ReadOnlyController<DTO, T, ID>(domainService, mapper) {}
+    }
 
-    /**
-     * Retrieves all entities.
-     *
-     * @return A `ResponseEntity` containing a list of DTOs.
-     */
-    @GetMapping("/all")
-    fun getAll(): ResponseEntity<List<DTO>>
+    override fun getAll(): ResponseEntity<List<DTO>> =
+        domainService.getAll()
+            .run(mapper::mapAllFrom)
+            .let(ResponseEntityProvider::ok)
 
-    /**
-     * Retrieves a paginated list of DTO objects.
-     *
-     * @param page The page number to retrieve (default: 0).
-     * @param size The number of items per page (default: 20).
-     * @param order The field to order the results by (optional).
-     * @param asc Specifies the ordering direction (optional).
-     * @return A `ResponseEntity` containing a `Page` of DTO objects.
-     */
-    @GetMapping("/page")
-    fun getAllPaginated(
-        @RequestParam(defaultValue = "0") page: Int,
-        @RequestParam(defaultValue = "20") size: Int,
-        @RequestParam(required = false) order: String?,
-        @RequestParam(required = false) asc: Boolean?,
-    ): ResponseEntity<Page<DTO>>
-
+    override fun getAllPaginated(page: Int, size: Int, order: String?, asc: Boolean?): ResponseEntity<Page<DTO>> {
+        var pageRequest = PageRequest.of(page, size)
+        if (order != null && asc != null) {
+            pageRequest = PageRequest.of(page, size, if (asc) Sort.Direction.ASC else Sort.Direction.DESC, order)
+        }
+        val dtoList = domainService.getByPage(pageRequest).map(mapper::mapFrom)
+        return ResponseEntity.ok(dtoList)
+    }
 }

@@ -3,7 +3,7 @@
 <div align="center">
   <a href="#">
    <!-- Replace this logo for a custom official logo -->
-    <img src="./readme-assets/logos/jx-core.png" alt="Logo" width="250" height="190">
+    <img src="./readme-assets/logos/jxelerate.png" alt="Logo" width="250" height="190">
   </a>
 
 <h1 align = "center">
@@ -11,7 +11,7 @@
 </h1>
 </div>
 
-**_Jxelerate_** is an internal library designed to provide clear-cut persistence functionality with _HATEOAS_ (Hypermedia as the Engine of Application State) support up to a basic level of [Richardson Maturity].
+**_Jxelerate_** is a simple internal library designed to provide clear-cut persistence functionality with _HATEOAS_ (Hypermedia as the Engine of Application State) support up to a basic level of [Richardson Maturity].
 
 It offers a set of components and abstractions that enable the development of RESTful APIs with hypermedia links, facilitating resource navigation and interaction.
 
@@ -31,24 +31,24 @@ The `jxelerate` module is designed to simplify common development tasks and prov
 It includes classes and interfaces that can be utilized across various domains and applications.
 
 ## Documentation
-**_Jxelerate_** provides comprehensive documentation that details its features, components, and usage. The documentation is generated using Dokka and [available via Github Pages](https://jxareas.github.io/jx-core/).
+**_Jxelerate_** provides comprehensive documentation that details its features, components, and usage. The documentation is generated using Dokka and [available via Github Pages](https://jxareas.github.io/jxelerate/).
 
 It serves as a valuable resource for understanding the library's simple capabilities and utilizing its functionalities effectively.
 
 
 ## Installation
 
-The `jx-core` module can be included in your Java project as a dependency. You can add it to your project's build file using your preferred build tool (e.g., Maven, Gradle) by specifying the appropriate coordinates or repository.
+The `jxelerate` module can be included in your Java project as a dependency. You can add it to your project's build file using your preferred build tool (e.g., Maven, Gradle) by specifying the appropriate coordinates or repository.
 
 ## Usage
 
-To use the `jx-core` module in your Java project, follow these steps:
+To use the `jxelerate` module in your Java project, follow these steps:
 
 1. Add the module as a dependency in your project configuration.
 2. Import the required classes or interfaces into your code.
 3. Utilize the provided classes and interfaces based on your specific requirements.
 
-For detailed usage examples and API documentation, please refer to the documentation or code comments within the `jx-core` module.
+For detailed usage examples and API documentation, please refer to the documentation or code comments within the `jxelerate` module.
 
 ## Components
 
