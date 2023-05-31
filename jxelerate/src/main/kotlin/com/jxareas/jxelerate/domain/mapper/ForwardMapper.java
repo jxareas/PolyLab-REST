@@ -7,14 +7,13 @@ import java.util.List;
 /**
  * The contract representing a one-way mapper that maps objects of type S to type D.
  *
+ * @author Jon Areas
+ * @version 1.3
  * @param <S> The source type.
  * @param <D> The destination type.
- *
- * @author Jon Areas
+ * @see Adapter
+ * @see MirrorMapper
  * @since 1.0
- * @version 1.3
- *
- * @see com.jxareas.jxelerate.domain.mapper.MirrorMapper
  */
 @FunctionalInterface
 public interface ForwardMapper<S, D> {

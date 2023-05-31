@@ -18,14 +18,14 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 /**
  * Global exception handler that handles and processes exceptions in the application.
- * It extends the ResponseEntityExceptionHandler, which is a convenient base class for creating exception handlers in Spring MVC.
+ * It extends the [ResponseEntityExceptionHandler] which is a convenient base class
+ * for creating exception handlers in Spring MVC.
  *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
- *
  * @see ResponseEntityExceptionHandler
  * @see ExceptionResolver
+ * @since 1.0
  */
 @ExceptionResolver
 object ResponseExceptionResolver : ResponseEntityExceptionHandler() {

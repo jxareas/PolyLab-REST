@@ -5,16 +5,17 @@ import org.springframework.hateoas.EntityModel
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 
 /**
- * Appends "next" and "previous" hypermedia links to the current [EntityModel] based on the given [id] and [fetchIdentifiers] function.
- *
- * @param id The identifier of the current entity.
- * @param fetchIdentifiers A function that fetches a list of all entity identifiers.
+ * Appends "next" and "previous" hypermedia links to the current [EntityModel] based on the given [id] and
+ * the [fetchIdentifiers] function.
  *
  * @author Jon Areas
- * @since 1.1
  * @version 1.3
- *
+ * @param id The identifier of the current entity.
+ * @param fetchIdentifiers A function that fetches a list of all entity identifiers.
+ * @receiver A controller which implements the [HypermediaController] contract.
  * @see EntityModel
+ * @see HypermediaController
+ * @since 1.3
  */
 internal fun <DTO, ID> HypermediaController<DTO, ID>.withNextAndPreviousLink(
     id: ID,

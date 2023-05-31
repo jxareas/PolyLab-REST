@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Primary
  * Basic configuration class for Mappers.
  *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
+ * @since 1.0
  */
 @Configuration
 class MapperConfiguration {

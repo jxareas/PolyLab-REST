@@ -8,8 +8,7 @@ import org.springframework.context.annotation.Import
 /**
  * Annotation used to enable the default `Jxelerate` functionality in a module.
  *
- * The `EnableJxelerate` annotation enables specific features provided by Jx Core library in a microservice.
- * It should be applied at the class level of a configuration class or the main application class.
+ * The [EnableJxelerate] annotation must be applied at the class level of the main application class.
  *
  * Usage:
  *
@@ -25,10 +24,9 @@ import org.springframework.context.annotation.Import
  * ```
  *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
- *
  * @see org.springframework.boot.SpringApplication
+ * @since 1.0
  */
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.CLASS)

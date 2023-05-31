@@ -12,12 +12,11 @@ import org.springframework.context.annotation.Configuration
  * Default configuration class for OpenAPI.
  *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
- *
  * @see io.swagger.v3.oas.models.OpenAPI
  * @see io.swagger.v3.oas.models.info.Info
  * @see io.swagger.v3.oas.models.Components
+ * @since 1.0
  */
 @Configuration
 class OpenApiConfiguration {

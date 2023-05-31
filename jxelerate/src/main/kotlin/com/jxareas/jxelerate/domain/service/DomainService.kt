@@ -7,13 +7,13 @@ import org.springframework.data.domain.Pageable
 /**
  * The contract representing a domain service responsible for managing operations on entities.
  *
- * @param <T> The entity type.
- * @param <ID> The identifier type of the entities.
  *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
- *
+ * @param <T> The entity type.
+ * @param <ID> The identifier type of the entities.
+ * @see PersistentService
+ * @since 1.0
  * @inheritdoc
  */
 interface DomainService<T, ID> {

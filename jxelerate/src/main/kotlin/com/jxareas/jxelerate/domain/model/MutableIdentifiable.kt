@@ -3,11 +3,11 @@ package com.jxareas.jxelerate.domain.model
 /**
  * A contract representing a uniquely, mutably identifiable entity.
  *
- * @param ID The type of the identifier.
- *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
+ * @param ID The type of the identifier.
+ * @see Identifiable
+ * @since 1.0
  */
 interface MutableIdentifiable<ID> {
     /**

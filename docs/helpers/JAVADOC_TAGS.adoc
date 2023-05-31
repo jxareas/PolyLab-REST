@@ -1,0 +1,15 @@
+== Order of Tags (Oracle)
+
+Include tags in the following order:
+
+- `@author` (classes and interfaces only, required)
+- `@version` (classes and interfaces only, required)
+- `@param` (methods and constructors only)
+- `@return` (methods only)
+- `@exception` (`@throws` is a synonym added in Javadoc 1.2)
+- `@see`
+- `@since`
+- `@serial` (or @serialField or @serialData)
+- `@deprecated` (see How and When To Deprecate APIs)
+
+Updated Info: https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#orderoftags

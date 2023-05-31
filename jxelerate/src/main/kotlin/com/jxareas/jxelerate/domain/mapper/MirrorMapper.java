@@ -8,14 +8,13 @@ import java.util.List;
 /**
  * The contract representing a two-way mapper that maps objects of type S to type D and vice versa.
  *
+ * @author Jon Areas
+ * @version 1.3
  * @param <S> The source type.
  * @param <D> The destination type.
- *
- * @author Jon Areas
+ * @see Adapter
+ * @see ForwardMapper
  * @since 1.0
- * @version 1.3
- *
- @see com.jxareas.jxelerate.domain.mapper.ForwardMapper
  */
 public interface MirrorMapper<S, D>  {
     /**
@@ -61,14 +60,14 @@ public interface MirrorMapper<S, D>  {
     /**
      * Adapter for custom mappers that provides a foundation for implementing the {@link MirrorMapper} interface.
      * It encapsulates common functionality and serves as a starting point for creating custom bidirectional mapper
-     * implementations with `ModelMapper`.
-     *
-     * @param <S> The source type.
-     * @param <D> The destination type.
+     * implementations by using an instance of `ModelMapper`.
      *
      * @author Jon Areas
-     * @since 1.0
      * @version 1.3
+     * @param <S> The source type.
+     * @param <D> The destination type.
+     * @see MirrorMapper
+     * @since 1.0
      */
     abstract class Adapter<S, D> implements MirrorMapper<S, D> {
 

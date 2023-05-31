@@ -8,17 +8,18 @@ import org.springframework.web.bind.annotation.*
 
 
 /**
- * The `HypermediaController` interface represents a controller that follows the Hypermedia-driven RESTful API design.
+ * The [HypermediaController] interface represents a controller that follows the Hypermedia-driven RESTful API design.
  * It provides endpoints for CRUD operations on entities of type [DTO] with an identifier ot type [ID],
  * along with additional hypermedia-related features.
  *
+ * @author Jon Areas
+ * @version 1.3
  * @param DTO The data transfer object type representing the entity.
  * @param ID The type of the entity's identifier.
- *
- * @author Jon Areas
+ * @see EntityModel
+ * @see CollectionModel
+ * @see ResponseEntity
  * @since 1.0
- * @version 1.3
- *
  * @inheritdoc
  */
 interface HypermediaController<DTO, ID> {

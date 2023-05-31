@@ -1,7 +1,7 @@
 package com.jxareas.jxelerate.app.controller
 
 import com.jxareas.jxelerate.app.extensions.withNextAndPreviousLink
-import com.jxareas.jxelerate.common.helpers.ResponseEntityResolver
+import com.jxareas.jxelerate.common.helpers.ResponseEntityProvider
 import com.jxareas.jxelerate.common.helpers.UriResourceProvider
 import com.jxareas.jxelerate.domain.mapper.MirrorMapper
 import com.jxareas.jxelerate.domain.model.MutableIdentifiable
@@ -23,19 +23,18 @@ import java.io.Serializable
  * [AppController] extends the [HypermediaController] and [ReadOnlyController] interfaces to enable hypermedia links
  * write and read-only operations for the entities.
  *
+ * @author Jon Areas
+ * @version 1.3
+ * @param domainService The domain service responsible for managing the business logic and operations on the entities.
+ * @param mapper The mapper responsible for converting between DTOs and domain models or persistent objects.
  * @param <DTO> The Data Transfer Object type used for transferring data between the client and the server.
  * @param <T> The entity or model object type in the domain that the controller operates on.
  * @param <ID> The type of the identifier used to uniquely identify the entities in the domain.
- *
- * @param domainService The domain service responsible for managing the business logic and operations on the entities.
- * @param mapper The mapper responsible for converting between DTOs and domain models or persistent objects.
- *
- * @author Jon Areas
- * @since 1.0
- * @version 1.3
- *
  * @see HypermediaController
  * @see ReadOnlyController
+ * @since 1.0
+ *
+ *
  */
 abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serializable>(
     private val domainService: DomainService<T, ID>,
@@ -53,7 +52,7 @@ abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serial
     override fun getAll(): ResponseEntity<List<DTO>> =
         domainService.getAll()
             .run(mapper::mapAllFrom)
-            .let(ResponseEntityResolver::ok)
+            .let(ResponseEntityProvider::ok)
 
     override fun getAllPaginated(page: Int, size: Int, order: String?, asc: Boolean?): ResponseEntity<Page<DTO>> {
         var pageRequest = PageRequest.of(page, size)
@@ -76,7 +75,7 @@ abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serial
         val savedEntity = domainService.save(entity)
         val createdResource = mapper.mapFrom(savedEntity)
         val entityModel = buildEntityModelWithLinks(createdResource)
-        return ResponseEntityResolver.created(entityModel) {
+        return ResponseEntityProvider.created(entityModel) {
             UriResourceProvider.withId(createdResource.id)
         }
     }
@@ -92,7 +91,7 @@ abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serial
 
     override fun deleteById(id: ID): ResponseEntity<Void> {
         domainService.deleteById(id)
-        return ResponseEntity.noContent().build()
+        return ResponseEntityProvider.noContent()
     }
 
     /**
@@ -116,6 +115,7 @@ abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serial
      *
      * @param id The ID of the current entity.
      * @param entityModel The EntityModel to append the links to.
+     * @see withNextAndPreviousLink
      */
     private fun appendNextAndPreviousLink(id: ID, entityModel: EntityModel<DTO>) =
         withNextAndPreviousLink(id, entityModel) {
@@ -123,9 +123,9 @@ abstract class AppController<DTO : MutableIdentifiable<ID>, T : Any, ID : Serial
         }
 
     /**
-     * Append self link to the CollectionModel.
+     * Append self-link to the CollectionModel.
      *
-     * @param collectionModel The CollectionModel to append the self link to.
+     * @param collectionModel The CollectionModel to append the self-link to.
      */
     private fun appendSelfLink(collectionModel: CollectionModel<EntityModel<DTO>>) {
         collectionModel.add(WebMvcLinkBuilder.linkTo(javaClass).withSelfRel())

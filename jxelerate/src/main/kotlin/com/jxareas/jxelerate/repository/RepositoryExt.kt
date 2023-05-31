@@ -15,15 +15,14 @@ import java.util.UUID
  * - [UUIDKeyedRepository] represents a repository with `UUID` as the key type.
  *
  * @author Jon Areas
- * @since 1.3
  * @version 1.3
- *
- * @see DefaultRepository
+ * @see StandardRepository
+ * @since 1.3
  */
-typealias IntKeyedRepository<T> = DefaultRepository<T, Int>
+typealias IntKeyedRepository<T> = StandardRepository<T, Int>
 
-typealias LongKeyedRepository<T> = DefaultRepository<T, Long>
+typealias LongKeyedRepository<T> = StandardRepository<T, Long>
 
-typealias StringKeyedRepository<T> = DefaultRepository<T, String>
+typealias StringKeyedRepository<T> = StandardRepository<T, String>
 
-typealias UUIDKeyedRepository<T> = DefaultRepository<T, UUID>
+typealias UUIDKeyedRepository<T> = StandardRepository<T, UUID>

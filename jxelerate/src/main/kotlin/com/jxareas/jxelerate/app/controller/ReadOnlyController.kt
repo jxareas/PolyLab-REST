@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
 /**
- * The `ReadOnlyController` interface provides read-only operations for retrieving entities.
+ * An interface that provides read-only operations for the retrieval of entities.
  * Implementations of this interface can retrieve all entities or retrieve entities in a paginated manner.
  *
+ * @author Jon Areas
+ * @version 1.3
  * @param DTO The DTO (Data Transfer Object) type representing the entity.
  * @param ID The type of the entity's identifier.
- *
- * @author Jon Areas
+ * @see Page
+ * @see ResponseEntity
  * @since 1.0
- * @version 1.3
- *
  * @inheritdoc
  */
 interface ReadOnlyController<DTO, ID> {

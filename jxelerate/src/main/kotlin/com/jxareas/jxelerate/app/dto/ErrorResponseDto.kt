@@ -15,11 +15,10 @@ import java.time.LocalDateTime
  * @constructor Creates an instance of the ErrorResponseDto class with the specified values.
  *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
- *
- * @see [com.jxareas.jxelerate.common.exception.ModelNotFoundException]
- * @see [com.jxareas.jxelerate.configuration.exception.ResponseExceptionResolver]
+ * @see com.jxareas.jxelerate.common.exception.ModelNotFoundException
+ * @see com.jxareas.jxelerate.configuration.exception.ResponseExceptionResolver
+ * @since 1.0
  */
 data class ErrorResponseDto(
     val message: String,
@@ -27,7 +26,7 @@ data class ErrorResponseDto(
     val dateTime: LocalDateTime = LocalDateTime.now()
 ) {
     /**
-     * Creates an instance of ErrorResponseDto with the exception message and request information.
+     * Creates an instance of [ErrorResponseDto] with the exception message and request information.
      *
      * @param exceptionMessage The exception message describing the encountered issue.
      * @param request The [WebRequest] object containing information about the current request.

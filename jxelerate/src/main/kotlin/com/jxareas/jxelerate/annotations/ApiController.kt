@@ -21,27 +21,21 @@ import org.springframework.web.bind.annotation.RestController
  * }
  * ```
  *
- * @param path The URL paths to which the controller should be mapped.
- *
- * @param tagName The name of the tag associated with the API controller.
- *
- * @param tagDescription The description of the tag associated with the API controller.
- *
- * @param values An array of URL paths to which the controller should be mapped.
- *
- * @param methods The array of HTTP methods supported by the API controller.
- *
- * @param params The array of request parameter conditions for the API controller.
- *
- * @param headers The array of request header conditions for the API controller.
- *
- * @param consumes The array of media types that the API controller can consume.
- *
- * @param produces The array of media types that the API controller can produce.
- *
  * @author Jon Areas
- * @since 1.0
  * @version 1.3
+ * @param path The URL paths to which the controller should be mapped.
+ * @param tagName The name of the tag associated with the API controller.
+ * @param tagDescription The description of the tag associated with the API controller.
+ * @param values An array of URL paths to which the controller should be mapped.
+ * @param methods The array of HTTP methods supported by the API controller.
+ * @param params The array of request parameter conditions for the API controller.
+ * @param headers The array of request header conditions for the API controller.
+ * @param consumes The array of media types that the API controller can consume.
+ * @param produces The array of media types that the API controller can produce.
+ * @see org.springframework.web.bind.annotation.RequestMapping
+ * @see org.springframework.web.bind.annotation.RestController
+ * @see io.swagger.v3.oas.annotations.tags.Tag
+ * @since 1.0
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)

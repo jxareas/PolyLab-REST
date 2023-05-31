@@ -9,8 +9,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
  * Implements the [WebMvcConfigurer] interface to customize the Spring MVC configuration.
  *
  * @author Jon Areas
- * @since 1.2
  * @version 1.3
+ * @see com.jxareas.jxelerate.annotations.EnableNonRestrictiveCorsPolicy
+ * @since 1.2
  */
 @Configuration
 class NonRestrictiveCorsPolicy : WebMvcConfigurer {

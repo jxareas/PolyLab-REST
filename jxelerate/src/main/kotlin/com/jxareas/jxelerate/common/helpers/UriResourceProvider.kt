@@ -1,13 +1,15 @@
 package com.jxareas.jxelerate.common.helpers
 
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
+import java.net.URI
 
 /**
  * A helper class providing utility methods for constructing URIs.
  *
  * @author Jon Areas
- * @since 1.1
  * @version 1.3
+ * @see URI
+ * @since 1.1
  */
 object UriResourceProvider {
 
@@ -18,7 +20,7 @@ object UriResourceProvider {
      * @return The constructed URI.
      */
     @JvmStatic
-    fun withId(id: Any) = withUri("/{id}", id)
+    fun withId(id: Any): URI = withUri("/{id}", id)
 
     /**
      * Constructs a URI with the specified path and URI variable values.
@@ -28,7 +30,7 @@ object UriResourceProvider {
      * @return The constructed URI.
      */
     @JvmStatic
-    fun withUri(path: String, vararg uriVariableValues: Any) =
+    fun withUri(path: String, vararg uriVariableValues: Any): URI =
         ServletUriComponentsBuilder.fromCurrentRequest()
             .path(path)
             .buildAndExpand(*uriVariableValues)

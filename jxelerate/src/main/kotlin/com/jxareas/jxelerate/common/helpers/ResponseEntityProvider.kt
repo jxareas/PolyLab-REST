@@ -13,10 +13,11 @@ private typealias UriProvider = () -> URI
  * Helper class for creating ResponseEntity instances.
  *
  * @author Jon Areas
- * @since 1.1
  * @version 1.3
+ * @see ResponseEntity
+ * @since 1.1
  */
-object ResponseEntityResolver {
+object ResponseEntityProvider {
     /**
      * Creates a ResponseEntity with a "No Content" status.
      *
