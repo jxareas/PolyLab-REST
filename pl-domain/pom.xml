@@ -60,7 +60,7 @@
         </dependency>
         <dependency>
             <groupId>com.jxareas</groupId>
-            <artifactId>jxelerate</artifactId>
+            <artifactId>efficax</artifactId>
             <version>${com.jxareas.jxelerate.version}</version>
         </dependency>
         <dependency>

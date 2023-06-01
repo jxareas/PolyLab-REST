@@ -1,7 +1,7 @@
 package com.polylab.doctors.app.controller
 
-import com.jxareas.jxelerate.annotations.ApiController
-import com.jxareas.jxelerate.app.controller.HyperController
+import com.jxareas.efficax.annotations.ApiController
+import com.jxareas.efficax.app.controller.HyperController
 import com.polylab.doctors.app.dto.DoctorDto
 import com.polylab.doctors.app.mapper.DoctorDtoMapper
 import com.polylab.doctors.domain.service.DoctorService

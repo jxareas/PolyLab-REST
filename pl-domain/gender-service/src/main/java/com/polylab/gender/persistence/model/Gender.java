@@ -1,6 +1,6 @@
 package com.polylab.gender.persistence.model;
 
-import com.jxareas.jxelerate.domain.model.Identifiable;
+import com.jxareas.efficax.domain.model.Identifiable;
 import com.polylab.gender.common.constants.GenderConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

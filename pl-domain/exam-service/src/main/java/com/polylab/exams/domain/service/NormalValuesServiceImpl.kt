@@ -1,6 +1,6 @@
 package com.polylab.exams.domain.service
 
-import com.jxareas.jxelerate.domain.service.PersistentService
+import com.jxareas.efficax.domain.service.PersistentService
 import com.polylab.exams.persistence.model.NormalValues
 import com.polylab.exams.persistence.repository.NormalValuesRepository
 import org.springframework.stereotype.Service

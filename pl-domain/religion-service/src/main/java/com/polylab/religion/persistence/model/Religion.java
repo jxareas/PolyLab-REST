@@ -1,6 +1,6 @@
 package com.polylab.religion.persistence.model;
 
-import com.jxareas.jxelerate.domain.model.Identifiable;
+import com.jxareas.efficax.domain.model.Identifiable;
 import com.polylab.religion.common.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

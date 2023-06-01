@@ -1,6 +1,6 @@
 package com.polylab.countries.persistence.model;
 
-import com.jxareas.jxelerate.domain.model.Identifiable;
+import com.jxareas.efficax.domain.model.Identifiable;
 import com.polylab.countries.common.constants.CountryConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

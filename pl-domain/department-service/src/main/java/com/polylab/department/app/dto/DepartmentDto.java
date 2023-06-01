@@ -2,7 +2,7 @@ package com.polylab.department.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jxareas.jxelerate.domain.model.MutableIdentifiable;
+import com.jxareas.efficax.domain.model.MutableIdentifiable;
 import com.polylab.department.common.constants.DepartmentConstants;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

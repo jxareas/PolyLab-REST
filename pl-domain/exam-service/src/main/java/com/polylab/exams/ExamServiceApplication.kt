@@ -1,11 +1,11 @@
 package com.polylab.exams;
 
-import com.jxareas.jxelerate.annotations.EnableJxelerate
-import com.jxareas.jxelerate.annotations.EnableNonRestrictiveCorsPolicy
-import com.jxareas.jxelerate.common.extensions.runApp
+import com.jxareas.efficax.annotations.EnableEfficax
+import com.jxareas.efficax.annotations.EnableNonRestrictiveCorsPolicy
+import com.jxareas.efficax.common.extensions.runApp
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
-@EnableJxelerate
+@EnableEfficax
 @EnableNonRestrictiveCorsPolicy
 @SpringBootApplication
 open class ExamServiceApplication

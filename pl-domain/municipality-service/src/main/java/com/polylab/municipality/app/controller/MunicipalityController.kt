@@ -1,7 +1,7 @@
 package com.polylab.municipality.app.controller
 
-import com.jxareas.jxelerate.annotations.ApiController
-import com.jxareas.jxelerate.app.controller.HyperController
+import com.jxareas.efficax.annotations.ApiController
+import com.jxareas.efficax.app.controller.HyperController
 import com.polylab.municipality.app.dto.MunicipalityDto
 import com.polylab.municipality.app.mapper.MunicipalityDtoMapper
 import com.polylab.municipality.domain.service.MunicipalityService
