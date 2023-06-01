@@ -1,4 +1,4 @@
-package com.jxareas.efficax.app.controller
+package com.jxareas.efficax.controller
 
 import org.springframework.hateoas.CollectionModel
 import org.springframework.hateoas.EntityModel

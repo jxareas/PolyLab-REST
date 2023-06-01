@@ -1,4 +1,4 @@
-package com.jxareas.efficax.common.helpers
+package com.jxareas.efficax.helpers
 
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
 import java.net.URI

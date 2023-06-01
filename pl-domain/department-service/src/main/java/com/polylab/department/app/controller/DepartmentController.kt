@@ -1,7 +1,7 @@
 package com.polylab.department.app.controller
 
 import com.jxareas.efficax.annotations.ApiController
-import com.jxareas.efficax.app.controller.HyperController
+import com.jxareas.efficax.controller.HyperController
 import com.polylab.department.app.dto.DepartmentDto
 import com.polylab.department.app.mapper.DepartmentDtoMapper
 import com.polylab.department.domain.service.DepartmentService

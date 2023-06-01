@@ -1,4 +1,4 @@
-package com.jxareas.efficax.app.dto
+package com.jxareas.efficax.exception
 
 import org.springframework.web.context.request.WebRequest
 import java.time.LocalDateTime

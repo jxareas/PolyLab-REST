@@ -1,4 +1,4 @@
-package com.jxareas.efficax.common.constants
+package com.jxareas.efficax.constants
 
 /**
  * Constants related to exceptions.

@@ -1,8 +1,8 @@
 package com.jxareas.efficax.domain.service
 
-import com.jxareas.efficax.common.exception.ModelNotFoundException.ResourceNotFoundException
-import com.jxareas.efficax.common.extensions.ifPresentOrThrow
-import com.jxareas.efficax.common.extensions.orElseThrow
+import com.jxareas.efficax.exception.ModelNotFoundException.ResourceNotFoundException
+import com.jxareas.efficax.extensions.ifPresentOrThrow
+import com.jxareas.efficax.extensions.orElseThrow
 import com.jxareas.efficax.domain.model.Identifiable
 import com.jxareas.efficax.repository.StandardRepository
 import org.springframework.data.domain.Page

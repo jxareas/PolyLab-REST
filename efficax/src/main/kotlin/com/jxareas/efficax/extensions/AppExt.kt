@@ -1,4 +1,4 @@
-package com.jxareas.efficax.common.extensions
+package com.jxareas.efficax.extensions
 
 import org.springframework.boot.SpringApplication
 import kotlin.reflect.KClass

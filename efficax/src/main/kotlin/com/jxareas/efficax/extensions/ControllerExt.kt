@@ -1,6 +1,6 @@
-package com.jxareas.efficax.app.extensions
+package com.jxareas.efficax.extensions
 
-import com.jxareas.efficax.app.controller.LinkableController
+import com.jxareas.efficax.controller.LinkableController
 import org.springframework.hateoas.EntityModel
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 

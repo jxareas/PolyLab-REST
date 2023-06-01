@@ -1,5 +1,6 @@
-package com.jxareas.efficax.repository
+package com.jxareas.efficax.extensions
 
+import com.jxareas.efficax.repository.StandardRepository
 import java.util.UUID
 
 /**

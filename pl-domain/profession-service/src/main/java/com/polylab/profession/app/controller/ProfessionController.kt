@@ -1,7 +1,7 @@
 package com.polylab.profession.app.controller
 
 import com.jxareas.efficax.annotations.ApiController
-import com.jxareas.efficax.app.controller.HyperController
+import com.jxareas.efficax.controller.HyperController
 import com.polylab.profession.app.dto.ProfessionDto
 import com.polylab.profession.app.mapper.ProfessionDtoMapper
 import com.polylab.profession.domain.service.ProfessionService

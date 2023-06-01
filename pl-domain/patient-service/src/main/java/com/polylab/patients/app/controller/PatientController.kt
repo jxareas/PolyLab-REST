@@ -1,7 +1,7 @@
 package com.polylab.patients.app.controller
 
 import com.jxareas.efficax.annotations.ApiController
-import com.jxareas.efficax.app.controller.HyperController
+import com.jxareas.efficax.controller.HyperController
 import com.polylab.patients.app.dto.PatientDto
 import com.polylab.patients.app.mapper.PatientDtoMapper
 import com.polylab.patients.domain.service.PatientService

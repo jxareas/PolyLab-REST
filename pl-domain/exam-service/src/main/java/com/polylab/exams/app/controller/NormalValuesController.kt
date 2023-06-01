@@ -1,7 +1,7 @@
 package com.polylab.exams.app.controller
 
 import com.jxareas.efficax.annotations.ApiController
-import com.jxareas.efficax.app.controller.HyperController
+import com.jxareas.efficax.controller.HyperController
 import com.polylab.exams.app.dto.NormalValuesDto
 import com.polylab.exams.app.mapper.NormalValuesDtoMapper
 import com.polylab.exams.domain.service.NormalValuesService

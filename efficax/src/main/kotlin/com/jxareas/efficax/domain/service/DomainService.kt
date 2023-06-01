@@ -1,6 +1,6 @@
 package com.jxareas.efficax.domain.service
 
-import com.jxareas.efficax.common.exception.ModelNotFoundException
+import com.jxareas.efficax.exception.ModelNotFoundException
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 

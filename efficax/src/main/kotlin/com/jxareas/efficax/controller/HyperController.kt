@@ -1,6 +1,6 @@
-package com.jxareas.efficax.app.controller
+package com.jxareas.efficax.controller
 
-import com.jxareas.efficax.app.extensions.withNextAndPreviousLink
+import com.jxareas.efficax.extensions.withNextAndPreviousLink
 import com.jxareas.efficax.domain.mapper.MirrorMapper
 import com.jxareas.efficax.domain.model.MutableIdentifiable
 import com.jxareas.efficax.domain.service.DomainService

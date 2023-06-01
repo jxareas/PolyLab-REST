@@ -1,7 +1,7 @@
 package com.polylab.countries.app.controller
 
 import com.jxareas.efficax.annotations.ApiController
-import com.jxareas.efficax.app.controller.HyperController
+import com.jxareas.efficax.controller.HyperController
 import com.polylab.countries.app.dto.CountryDto
 import com.polylab.countries.app.mapper.CountryDtoMapper
 import com.polylab.countries.domain.service.CountryService

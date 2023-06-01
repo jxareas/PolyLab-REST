@@ -1,4 +1,4 @@
-package com.jxareas.efficax.common.exception
+package com.jxareas.efficax.exception
 
 /**
  * Exception class representing a 'model not found' error.

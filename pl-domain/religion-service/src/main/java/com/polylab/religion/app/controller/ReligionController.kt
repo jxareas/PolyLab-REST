@@ -1,7 +1,7 @@
 package com.polylab.religion.app.controller
 
 import com.jxareas.efficax.annotations.ApiController
-import com.jxareas.efficax.app.controller.HyperController
+import com.jxareas.efficax.controller.HyperController
 import com.polylab.religion.app.dto.ReligionDto
 import com.polylab.religion.app.mapper.ReligionDtoMapper
 import com.polylab.religion.domain.service.ReligionService

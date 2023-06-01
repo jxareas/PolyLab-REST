@@ -2,7 +2,7 @@ package com.polylab.countries
 
 import com.jxareas.efficax.annotations.EnableEfficax
 import com.jxareas.efficax.annotations.EnableNonRestrictiveCorsPolicy
-import com.jxareas.efficax.common.extensions.with
+import com.jxareas.efficax.extensions.with
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @EnableEfficax

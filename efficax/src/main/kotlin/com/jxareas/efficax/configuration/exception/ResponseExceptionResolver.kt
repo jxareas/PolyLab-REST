@@ -1,9 +1,9 @@
 package com.jxareas.efficax.configuration.exception
 
 import com.jxareas.efficax.annotations.ExceptionResolver
-import com.jxareas.efficax.app.dto.ErrorResponseDto
-import com.jxareas.efficax.common.constants.ExceptionConstants
-import com.jxareas.efficax.common.exception.ModelNotFoundException
+import com.jxareas.efficax.exception.ErrorResponseDto
+import com.jxareas.efficax.constants.ExceptionConstants
+import com.jxareas.efficax.exception.ModelNotFoundException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode

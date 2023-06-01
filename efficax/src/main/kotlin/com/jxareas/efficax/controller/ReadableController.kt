@@ -1,4 +1,4 @@
-package com.jxareas.efficax.app.controller
+package com.jxareas.efficax.controller
 
 import org.springframework.data.domain.Page
 import org.springframework.http.ResponseEntity
