@@ -1,9 +1,9 @@
 package com.jxareas.jxelerator.domain.service
 
+import com.jxareas.jxelerator.domain.model.Identifiable
 import com.jxareas.jxelerator.exception.ModelNotFoundException.ResourceNotFoundException
 import com.jxareas.jxelerator.extensions.ifPresentOrThrow
 import com.jxareas.jxelerator.extensions.orElseThrow
-import com.jxareas.jxelerator.domain.model.Identifiable
 import com.jxareas.jxelerator.repository.StandardRepository
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
@@ -25,10 +25,7 @@ abstract class PersistentService<T : Identifiable<ID>, ID : Serializable>(
 ) : DomainService<T, ID> {
 
     override fun getAll(): List<T> = repository.findAll()
-
-
-    override fun getAllIdentifiers(): List<ID> = getAll().map(Identifiable<ID>::id)
-
+    override fun getAllIdentifiers(): List<ID> = getAll().map { it.id }
     override fun getByPage(pageable: Pageable): Page<T> = repository.findAll(pageable)
 
     override fun getById(id: ID): T = repository.findById(id).orElseThrow(ResourceNotFoundException)

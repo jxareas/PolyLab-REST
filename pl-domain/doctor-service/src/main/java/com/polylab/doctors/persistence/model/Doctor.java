@@ -21,7 +21,7 @@ public class Doctor implements Identifiable<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DoctorConstants.EMPLOYEE_ID, unique = true, nullable = false)
-    private Integer employeeId;
+    private Integer doctorId;
 
     @Column(name = DoctorConstants.PROFESSION_ID, nullable = false)
     private Integer professionId;
@@ -127,6 +127,6 @@ public class Doctor implements Identifiable<Integer> {
 
     @Override
     public Integer getId() {
-        return employeeId;
+        return doctorId;
     }
 }

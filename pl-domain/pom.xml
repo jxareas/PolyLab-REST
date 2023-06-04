@@ -118,5 +118,7 @@
         <module>gender-service</module>
         <module>municipality-service</module>
         <module>patient-service</module>
+        <module>profession-service</module>
+        <module>religion-service</module>
     </modules>
 </project>

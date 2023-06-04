@@ -35,7 +35,7 @@ It includes classes and interfaces that can be utilized across various domains a
 ## Documentation
 
 **_Jxelerator_** provides comprehensive documentation that details its features, components, and usage. The
-documentation is generated using Dokka and [**available via GitHub Pages**](https://jxareas.github.io/jxelerator/).
+documentation is generated using Dokka and [**available via GitHub Pages**](https://jxareas.github.io/Jxelerator/).
 
 It serves as a valuable resource for understanding the library's simple capabilities and utilizing its functionalities
 effectively.
@@ -61,7 +61,7 @@ the `jxelerator` module.
 _Jxelerator_ provides a set of interfaces, base abstract classes, helpers, extensions and annotations that can be
 extended and implemented to build custom functionality. Here's a brief overview of some of their key components:
 
-## Base Abstract Classes
+### Base Abstract Classes
 
 - `HyperController`: An abstract class that serves as a controller for handling hypermedia-based operations.
 
@@ -70,7 +70,7 @@ extended and implemented to build custom functionality. Here's a brief overview 
 - `MirrorMapper.Adapter`: An abstract class that acts as a mapper between source and destination objects and provides a
   basic mapping implementation using a ModelMapper instance.
 
-# Interfaces
+### Interfaces
 
 - `LinkableController`: An interface that defines a set of methods for a controller that can generate hypermedia links.
 
@@ -97,7 +97,7 @@ _Jxelerator_ provides several annotations that can be used to configure and enha
 - `UriResourceProvider`: A namespace over `ServletUriComponentsBuilder` for constructing URIs based on different
   patterns and variable values.
 
-### LICENSE
+## License
 
 **_Jxelerator_** is licensed under the [GNU Affero GPL v3.0](https://github.com/jxareas/PolyLab/blob/master/LICENSE).
 

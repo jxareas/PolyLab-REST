@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
  * @see org.springframework.web.bind.annotation.RestControllerAdvice
  * @since 1.0
  */
-@Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.CLASS)
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @RestControllerAdvice
 @MustBeDocumented

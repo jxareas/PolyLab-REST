@@ -3,7 +3,7 @@
 <div align="center">
   <a href="#">
    <!-- Replace this logo for a custom official logo -->
-    <img src="./readme-assets/logos/official_logo.jpg" alt="Logo" width="180" height="150">
+    <img src="./readme-assets/logos/official_logo.svg" alt="Logo" width="150" height="150">
   </a>
 
 <h1 align = "center">

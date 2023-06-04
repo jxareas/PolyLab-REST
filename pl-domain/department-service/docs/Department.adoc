@@ -1,22 +1,44 @@
 = Department
 
-== Entity
+== DTO
+[source, java]
+----
+public class DepartmentDto {
+
+    @Positive
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private Integer departmentId;
+
+    @Positive
+    @NotNull
+    private Integer countryId;
+
+    @NotEmpty
+    @Size(min = DepartmentConstants.DESCRIPTION_MIN_LENGTH, max = DepartmentConstants.DESCRIPTION_MAX_LENGTH)
+    private String description;
+
+    @NotNull
+    private Integer status;
+}
+----
+
+
+
+== Persistence Object
 
 [source,java]
 ----
-public class Departamento {
+public class Department  {
+
     @Id
-    @Column(name = "IdDepartamento")
-    private int idDepartamento;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer departmentId;
 
-    @Column(name = "IdPais")
-    private int idPais;
+    private Integer countryId;
 
-    @Column(name = "Descripcion")
-    private String descripcion;
+    private String description;
 
-    @Column(name = "Estado")
-    private int estado;
+    private Integer status;
 }
 ----
 

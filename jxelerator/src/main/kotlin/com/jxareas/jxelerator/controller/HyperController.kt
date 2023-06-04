@@ -3,6 +3,7 @@ package com.jxareas.jxelerator.controller
 import com.jxareas.jxelerator.domain.mapper.MirrorMapper
 import com.jxareas.jxelerator.domain.model.MutableIdentifiable
 import com.jxareas.jxelerator.domain.service.DomainService
+import com.jxareas.jxelerator.extensions.appendElementaryLinks
 import com.jxareas.jxelerator.extensions.withNextAndPreviousLink
 import org.springframework.hateoas.CollectionModel
 import org.springframework.hateoas.EntityModel
@@ -10,7 +11,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 import java.io.Serializable
 
 /**
- * The [HyperController] abstract class serves as a base controller implementation that provides CRUD operations and
+ * The [HyperController] abstract class serves as a default controller implementation that provides CRUD operations and
  * hypermedia-driven functionality for entities.
 
  * It works with three types: the mutable data transfer object (DTO), the entity type (T), and the identifier type (ID).
@@ -39,12 +40,11 @@ abstract class HyperController<DTO : MutableIdentifiable<ID>, T : Any, ID : Seri
 
     override fun buildEntityModelWithLinks(dto: DTO): EntityModel<DTO> {
         val id = dto.id
-        val entityModel = EntityModel.of(dto)
-        entityModel.add(WebMvcLinkBuilder.linkTo(javaClass).slash(id).withSelfRel())
-        appendNextAndPreviousLink(id, entityModel)
-        entityModel.add(WebMvcLinkBuilder.linkTo(javaClass).slash(id).withRel("delete"))
-        entityModel.add(WebMvcLinkBuilder.linkTo(javaClass).withRel("all"))
-        return entityModel
+        val controllerClass = this.javaClass
+        return EntityModel.of(dto).apply {
+            appendNextAndPreviousLink(id, entityModel =this)
+            appendElementaryLinks(controllerClass, id)
+        }
     }
 
     override fun appendSelfLink(collectionModel: CollectionModel<EntityModel<DTO>>) {
