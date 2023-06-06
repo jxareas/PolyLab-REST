@@ -20,12 +20,12 @@ public class ExamConstants {
     public final String RESULT_TYPE_ID_FIELD = "IdTipoResultado";
 
     public final String DESCRIPTION_FIELD = "Descripcion";
-    public final int DESCRIPTION_MIN_LENGTH = 30;
+    public final int DESCRIPTION_MIN_LENGTH = 3;
     public final int DESCRIPTION_MAX_LENGTH = 50;
 
     public final String SHORT_DESCRIPTION_FIELD = "DescripcionCorta";
-    public final int SHORT_DESCRIPTION_MIN_LENGTH = 10;
-    public final int SHORT_DESCRIPTION_MAX_LENGTH = 25;
+    public final int SHORT_DESCRIPTION_MIN_LENGTH = 3;
+    public final int SHORT_DESCRIPTION_MAX_LENGTH = 15;
 
     public final String LIS_CODE_FIELD = "LisCode";
 

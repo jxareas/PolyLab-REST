@@ -2,6 +2,10 @@ package com.polylab.patients.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.jxareas.jxelerator.domain.model.MutableIdentifiable;
 import com.polylab.patients.common.constants.PatientConstants;
 import jakarta.validation.constraints.NotBlank;
@@ -95,6 +99,8 @@ public class PatientDto implements MutableIdentifiable<Integer> {
     private String secondSurname;
 
     @NotNull
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate dateOfBirth;
 
     @NotBlank

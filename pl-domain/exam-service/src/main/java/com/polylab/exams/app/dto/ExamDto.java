@@ -45,7 +45,7 @@ public class ExamDto implements MutableIdentifiable<Integer> {
     @NotNull
     private Integer resultTypeId;
 
-    @Size(min = ExamConstants.DESCRIPTION_MAX_LENGTH, max = ExamConstants.DESCRIPTION_MAX_LENGTH)
+    @Size(min = ExamConstants.DESCRIPTION_MIN_LENGTH, max = ExamConstants.DESCRIPTION_MAX_LENGTH)
     @NotEmpty
     private String description;
 
